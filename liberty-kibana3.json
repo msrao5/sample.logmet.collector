@@ -46,7 +46,7 @@
           "pin": true,
           "type": "lucene",
           "enable": true,
-          "query": "_type:liberty_message AND severity:F"
+          "query": "_type:liberty_message AND loglevel:FATAL"
         },
         "5": {
           "id": 5,
@@ -55,7 +55,7 @@
           "pin": true,
           "type": "lucene",
           "enable": true,
-          "query": "_type:liberty_message AND severity:E"
+          "query": "_type:liberty_message AND loglevel:ERROR"
         },
         "6": {
           "id": 6,
@@ -64,7 +64,7 @@
           "pin": true,
           "type": "lucene",
           "enable": true,
-          "query": "_type:liberty_message AND severity:W"
+          "query": "_type:liberty_message AND loglevel:WARNING"
         },
         "7": {
           "id": 7,
@@ -73,7 +73,7 @@
           "pin": true,
           "type": "lucene",
           "enable": true,
-          "query": "_type:liberty_message AND severity:A"
+          "query": "_type:liberty_message AND loglevel:AUDIT"
         },
         "8": {
           "id": 8,
@@ -82,7 +82,7 @@
           "pin": true,
           "type": "lucene",
           "enable": true,
-          "query": "_type:liberty_message AND severity:I"
+          "query": "_type:liberty_message AND loglevel:INFO"
         },
         "9": {
           "id": 9,
@@ -91,7 +91,7 @@
           "pin": true,
           "type": "lucene",
           "enable": true,
-          "query": "_type:liberty_message AND severity:O"
+          "query": "_type:liberty_message AND loglevel:SystemOut"
         },
         "10": {
           "id": 10,
@@ -100,7 +100,7 @@
           "pin": true,
           "type": "lucene",
           "enable": true,
-          "query": "_type:liberty_message AND severity:R"
+          "query": "_type:liberty_message AND loglevel:SystemErr"
         },
         "11": {
           "id": 11,
@@ -109,7 +109,7 @@
           "pin": true,
           "type": "lucene",
           "enable": true,
-          "query": "_type:liberty_trace AND severity:1"
+          "query": "_type:liberty_trace AND loglevel:FINE"
         },
         "12": {
           "id": 12,
@@ -118,7 +118,7 @@
           "pin": true,
           "type": "lucene",
           "enable": true,
-          "query": "_type:liberty_trace AND (severity:2 OR severity:\"<\" OR severity:\">\")"
+          "query": "_type:liberty_trace AND (loglevel:FINER OR loglevel:EXIT OR loglevel:ENTRY)"
         },
         "13": {
           "id": 13,
@@ -127,7 +127,7 @@
           "pin": true,
           "type": "lucene",
           "enable": true,
-          "query": "_type:liberty_trace AND severity:3"
+          "query": "_type:liberty_trace AND loglevel:FINEST"
         },
         "14": {
           "id": 14,
@@ -136,7 +136,7 @@
           "pin": true,
           "type": "lucene",
           "enable": true,
-          "query": "(_type:access_log OR _type:liberty_accesslog) AND responseCode:[100 TO 199]"
+          "query": "(_type:access_log OR _type:liberty_accesslog) AND was_responseCode:[100 TO 199]"
         },
         "15": {
           "id": 15,
@@ -145,7 +145,7 @@
           "pin": true,
           "type": "lucene",
           "enable": true,
-          "query": "(_type:access_log OR _type:liberty_accesslog) AND responseCode:[200 TO 299]"
+          "query": "(_type:access_log OR _type:liberty_accesslog) AND was_responseCode:[200 TO 299]"
         },
         "16": {
           "id": 16,
@@ -154,7 +154,7 @@
           "pin": true,
           "type": "lucene",
           "enable": true,
-          "query": "(_type:access_log OR _type:liberty_accesslog) AND responseCode:[300 TO 399]"
+          "query": "(_type:access_log OR _type:liberty_accesslog) AND was_responseCode:[300 TO 399]"
         },
         "17": {
           "id": 17,
@@ -163,7 +163,7 @@
           "pin": true,
           "type": "lucene",
           "enable": true,
-          "query": "(_type:access_log OR _type:liberty_accesslog) AND responseCode:[400 TO 499]"
+          "query": "(_type:access_log OR _type:liberty_accesslog) AND was_responseCode:[400 TO 499]"
         },
         "18": {
           "id": 18,
@@ -172,7 +172,7 @@
           "pin": true,
           "type": "lucene",
           "enable": true,
-          "query": "(_type:access_log OR _type:liberty_accesslog) AND responseCode:[500 TO 599]"
+          "query": "(_type:access_log OR _type:liberty_accesslog) AND was_responseCode:[500 TO 599]"
         },
         "19": {
           "id": 19,
@@ -181,7 +181,7 @@
           "pin": true,
           "type": "lucene",
           "enable": true,
-          "query": "(_type:access_log OR _type:liberty_accesslog) AND elapsedTime:[0 TO 250000]"
+          "query": "(_type:access_log OR _type:liberty_accesslog) AND was_elapsedTime:[0 TO 250000]"
         },
         "20": {
           "id": 20,
@@ -190,7 +190,7 @@
           "pin": true,
           "type": "lucene",
           "enable": true,
-          "query": "(_type:access_log OR _type:liberty_accesslog) AND elapsedTime:[250000 TO 500000]"
+          "query": "(_type:access_log OR _type:liberty_accesslog) AND was_elapsedTime:[250000 TO 500000]"
         },
         "21": {
           "id": 21,
@@ -199,7 +199,7 @@
           "pin": true,
           "type": "lucene",
           "enable": true,
-          "query": "(_type:access_log OR _type:liberty_accesslog) AND elapsedTime:{500000 TO 1000000]"
+          "query": "(_type:access_log OR _type:liberty_accesslog) AND was_elapsedTime:{500000 TO 1000000]"
         },
         "22": {
           "id": 22,
@@ -208,7 +208,7 @@
           "pin": true,
           "type": "lucene",
           "enable": true,
-          "query": "(_type:access_log OR _type:liberty_accesslog) AND elapsedTime:>1000000"
+          "query": "(_type:access_log OR _type:liberty_accesslog) AND was_elapsedTime:>1000000"
         },
         "23": {
           "id": 23,
@@ -235,7 +235,7 @@
           "pin": true,
           "type": "lucene",
           "enable": true,
-          "query": "_type:liberty_gc AND duration:[1000000 TO 5000000]"
+          "query": "_type:liberty_gc AND was_duration:[1000000 TO 5000000]"
         },
         "26": {
           "id": 26,
@@ -244,7 +244,7 @@
           "pin": true,
           "type": "lucene",
           "enable": true,
-          "query": "_type:liberty_gc AND duration:>5000000"
+          "query": "_type:liberty_gc AND was_duration:>5000000"
         }
       },
       "ids": [
@@ -281,7 +281,7 @@
       "list": {
         "0": {
           "type": "time",
-          "field": "datetime",
+          "field": "was_datetime",
           "from": "now-1h",
           "to": "now",
           "mandate": "must",
@@ -309,7 +309,7 @@
           "editable": true,
           "type": "terms",
           "loadingEditor": false,
-          "field": "hostName",
+          "field": "host",
           "exclude": [],
           "missing": false,
           "other": true,
@@ -342,7 +342,7 @@
           "editable": true,
           "type": "terms",
           "loadingEditor": false,
-          "field": "wlpUserDir",
+          "field": "was_userDir",
           "exclude": [],
           "missing": false,
           "other": true,
@@ -375,7 +375,7 @@
           "editable": true,
           "type": "terms",
           "loadingEditor": false,
-          "field": "serverName",
+          "field": "was_serverName",
           "exclude": [],
           "missing": false,
           "other": true,
@@ -418,7 +418,7 @@
           "type": "histogram",
           "loadingEditor": false,
           "mode": "count",
-          "time_field": "datetime",
+          "time_field": "was_datetime",
           "value_field": null,
           "x-axis": true,
           "y-axis": true,
@@ -494,7 +494,7 @@
           "type": "histogram",
           "loadingEditor": false,
           "mode": "count",
-          "time_field": "datetime",
+          "time_field": "was_datetime",
           "value_field": null,
           "x-axis": true,
           "y-axis": true,
@@ -570,7 +570,7 @@
           "type": "histogram",
           "loadingEditor": false,
           "mode": "count",
-          "time_field": "datetime",
+          "time_field": "was_datetime",
           "value_field": null,
           "x-axis": true,
           "y-axis": true,
@@ -728,7 +728,7 @@
           "type": "histogram",
           "loadingEditor": false,
           "mode": "count",
-          "time_field": "datetime",
+          "time_field": "was_datetime",
           "value_field": null,
           "x-axis": true,
           "y-axis": true,
@@ -807,7 +807,7 @@
           "type": "histogram",
           "loadingEditor": false,
           "mode": "count",
-          "time_field": "datetime",
+          "time_field": "was_datetime",
           "value_field": null,
           "x-axis": true,
           "y-axis": true,
@@ -884,7 +884,7 @@
           "type": "histogram",
           "loadingEditor": false,
           "mode": "count",
-          "time_field": "datetime",
+          "time_field": "was_datetime",
           "value_field": null,
           "x-axis": true,
           "y-axis": true,
@@ -967,7 +967,7 @@
           "type": "histogram",
           "loadingEditor": false,
           "mode": "count",
-          "time_field": "datetime",
+          "time_field": "was_datetime",
           "value_field": null,
           "x-axis": true,
           "y-axis": true,
@@ -1042,7 +1042,7 @@
           "type": "histogram",
           "loadingEditor": false,
           "mode": "count",
-          "time_field": "datetime",
+          "time_field": "was_datetime",
           "value_field": null,
           "x-axis": true,
           "y-axis": true,
@@ -1125,8 +1125,8 @@
           "type": "histogram",
           "loadingEditor": false,
           "mode": "mean",
-          "time_field": "datetime",
-          "value_field": "elapsedTime",
+          "time_field": "was_datetime",
+          "value_field": "was_elapsedTime",
           "x-axis": true,
           "y-axis": true,
           "scale": ".001",
@@ -1198,7 +1198,7 @@
           "type": "histogram",
           "loadingEditor": false,
           "mode": "count",
-          "time_field": "datetime",
+          "time_field": "was_datetime",
           "value_field": null,
           "x-axis": true,
           "y-axis": true,
@@ -1284,8 +1284,8 @@
           "type": "histogram",
           "loadingEditor": false,
           "mode": "mean",
-          "time_field": "datetime",
-          "value_field": "duration",
+          "time_field": "was_datetime",
+          "value_field": "was_duration",
           "x-axis": true,
           "y-axis": true,
           "scale": 1,
@@ -1357,8 +1357,8 @@
           "type": "histogram",
           "loadingEditor": false,
           "mode": "mean",
-          "time_field": "datetime",
-          "value_field": "usedHeap",
+          "time_field": "was_datetime",
+          "value_field": "was_usedHeap",
           "x-axis": true,
           "y-axis": true,
           "scale": 1,
@@ -1430,8 +1430,8 @@
           "type": "histogram",
           "loadingEditor": false,
           "mode": "mean",
-          "time_field": "datetime",
-          "value_field": "heap",
+          "time_field": "was_datetime",
+          "value_field": "was_heap",
           "x-axis": true,
           "y-axis": true,
           "scale": 1,
@@ -1522,9 +1522,9 @@
           ],
           "overflow": "min-height",
           "fields": [
-            "datetime",
-            "severity",
-            "threadId",
+            "was_datetime",
+            "loglevel",
+            "was_threadId",
             "message"
           ],
           "highlight": [],
@@ -1574,14 +1574,14 @@
           ],
           "overflow": "min-height",
           "fields": [
-            "datetime",
-            "remoteHost",
-            "requestMethod",
-            "requestProtocol",
-            "uriPath",
-            "userAgent",
-            "responseCode",
-            "elapsedTime"
+            "was_datetime",
+            "was_remoteHost",
+            "was_requestMethod",
+            "was_requestProtocol",
+            "was_uriPath",
+            "was_userAgent",
+            "was_responseCode",
+            "was_elapsedTime"
           ],
           "highlight": [],
           "sortable": true,
@@ -1630,11 +1630,11 @@
           ],
           "overflow": "min-height",
           "fields": [
-            "reason",
-            "gcType",
-            "usedHeap",
-            "heap",
-            "duration"
+            "was_reason",
+            "was_gcType",
+            "was_usedHeap",
+            "was_heap",
+            "was_duration"
           ],
           "highlight": [],
           "sortable": true,
@@ -1683,11 +1683,11 @@
           ],
           "overflow": "min-height",
           "fields": [
-            "datetime",
-            "severity",
-            "threadId",
-            "className",
-            "methodName",
+            "was_datetime",
+            "loglevel",
+            "was_threadId",
+            "was_className",
+            "was_methodName",
             "message"
           ],
           "highlight": [],
@@ -1737,10 +1737,10 @@
           ],
           "overflow": "min-height",
           "fields": [
-            "className",
-            "probeID",
-            "exceptionName",
-            "objectDetails"
+            "was_className",
+            "was_probeID",
+            "was_exceptionName",
+            "was_objectDetails"
           ],
           "highlight": [],
           "sortable": true,
@@ -1787,16 +1787,16 @@
       "query": "*",
       "pinned": true,
       "history": [
-        "_type:liberty_gc AND duration:>5000000",
-        "_type:liberty_gc AND duration:[1000000 TO 5000000]",
+        "_type:liberty_gc AND was_duration:>5000000",
+        "_type:liberty_gc AND was_duration:[1000000 TO 5000000]",
         "_type:*",
         "_type:liberty_gc",
-        "_type:access_log AND elapsedTime:>1000000",
-        "_type:access_log AND elapsedTime:{500000 TO 1000000]",
-        "_type:access_log AND elapsedTime:[250000 TO 500000]",
-        "_type:access_log AND elapsedTime:[0 TO 250000]",
-        "_type:access_log AND responseCode:[500 TO 599]",
-        "_type:access_log AND responseCode:[400 TO 499]"
+        "_type:access_log AND was_elapsedTime:>1000000",
+        "_type:access_log AND was_elapsedTime:{500000 TO 1000000]",
+        "_type:access_log AND was_elapsedTime:[250000 TO 500000]",
+        "_type:access_log AND was_elapsedTime:[0 TO 250000]",
+        "_type:access_log AND was_responseCode:[500 TO 599]",
+        "_type:access_log AND was_responseCode:[400 TO 499]"
       ],
       "remember": 10
     },
@@ -1837,7 +1837,7 @@
         "2h",
         "1d"
       ],
-      "timefield": "datetime",
+      "timefield": "was_datetime",
       "now": true,
       "filter_id": 0
     }
