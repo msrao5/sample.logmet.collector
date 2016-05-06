@@ -1,5 +1,5 @@
 {
-  "title": "Liberty-K3-20160216",
+  "title": "Liberty-K3-20160506",
   "services": {
     "query": {
       "list": {
@@ -1517,7 +1517,7 @@
           "pages": 5,
           "offset": 0,
           "sort": [
-            "sequence",
+            "was_sequence",
             "desc"
           ],
           "overflow": "min-height",
@@ -1569,7 +1569,7 @@
           "pages": 5,
           "offset": 0,
           "sort": [
-            "sequence",
+            "was_sequence",
             "desc"
           ],
           "overflow": "min-height",
@@ -1625,7 +1625,7 @@
           "pages": 5,
           "offset": 0,
           "sort": [
-            "sequence",
+            "was_sequence",
             "desc"
           ],
           "overflow": "min-height",
@@ -1678,7 +1678,7 @@
           "pages": 5,
           "offset": 0,
           "sort": [
-            "sequence",
+            "was_sequence",
             "desc"
           ],
           "overflow": "min-height",
@@ -1732,7 +1732,7 @@
           "pages": 5,
           "offset": 0,
           "sort": [
-            "sequence",
+            "was_sequence",
             "desc"
           ],
           "overflow": "min-height",
