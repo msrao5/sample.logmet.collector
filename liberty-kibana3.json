@@ -1,5 +1,5 @@
 {
-  "title": "Liberty-K3-20160506",
+  "title": "Liberty-K3-20160922",
   "services": {
     "query": {
       "list": {
@@ -226,7 +226,7 @@
           "pin": true,
           "type": "lucene",
           "enable": true,
-          "query": "_type:*"
+          "query": "_type:liberty_*"
         },
         "25": {
           "id": 25,
@@ -1789,7 +1789,7 @@
       "history": [
         "_type:liberty_gc AND was_duration:>5000000",
         "_type:liberty_gc AND was_duration:[1000000 TO 5000000]",
-        "_type:*",
+        "_type:liberty_*",
         "_type:liberty_gc",
         "_type:access_log AND was_elapsedTime:>1000000",
         "_type:access_log AND was_elapsedTime:{500000 TO 1000000]",
