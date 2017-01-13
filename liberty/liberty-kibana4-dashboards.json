@@ -1,0 +1,50 @@
+[
+  {
+    "_id": "SPACE_ID_PLACE_HOLDER_Liberty-Memory-K4-20161109",
+    "_type": "dashboard",
+    "_source": {
+      "description": "",
+      "group": "SPACE_ID_PLACE_HOLDER",
+      "hits": 0,
+      "kibanaSavedObjectMeta": {
+        "searchSourceJSON": "{\"filter\":[{\"query\":{\"query_string\":{\"query\":\"_type:liberty_gc\",\"analyze_wildcard\":true}}}]}"
+      },
+      "panelsJSON": "[{\"col\":1,\"id\":\"SPACE_ID_PLACE_HOLDER_liberty_hostsTable\",\"row\":1,\"size_x\":4,\"size_y\":2,\"type\":\"visualization\"},{\"col\":5,\"id\":\"SPACE_ID_PLACE_HOLDER_liberty_userDirsTable\",\"row\":1,\"size_x\":4,\"size_y\":2,\"type\":\"visualization\"},{\"col\":9,\"id\":\"SPACE_ID_PLACE_HOLDER_liberty_serversTable\",\"row\":1,\"size_x\":4,\"size_y\":2,\"type\":\"visualization\"},{\"col\":1,\"id\":\"SPACE_ID_PLACE_HOLDER_liberty_gcDuration\",\"row\":3,\"size_x\":6,\"size_y\":4,\"type\":\"visualization\"},{\"col\":7,\"id\":\"SPACE_ID_PLACE_HOLDER_liberty_gcHeap\",\"row\":3,\"size_x\":6,\"size_y\":4,\"type\":\"visualization\"},{\"col\":1,\"columns\":[\"was_gcType\",\"was_usedHeap\",\"was_heap\",\"was_duration\",\"was_sequence\"],\"id\":\"SPACE_ID_PLACE_HOLDER_liberty_gcSearch\",\"row\":7,\"size_x\":12,\"size_y\":5,\"sort\":[\"was_sequence\",\"desc\"],\"type\":\"search\"}]",
+      "timeRestore": false,
+      "title": "Liberty-Memory-K4-20161109",
+      "version": 1
+    }
+  },
+  {
+    "_id": "SPACE_ID_PLACE_HOLDER_Liberty-Problems-K4-20161109",
+    "_type": "dashboard",
+    "_source": {
+      "description": "",
+      "group": "SPACE_ID_PLACE_HOLDER",
+      "hits": 0,
+      "kibanaSavedObjectMeta": {
+        "searchSourceJSON": "{\"filter\":[{\"query\":{\"query_string\":{\"analyze_wildcard\":true,\"query\":\"_type:liberty_message OR _type:liberty_trace OR _type:liberty_ffdc\"}}}]}"
+      },
+      "panelsJSON": "[{\"col\":1,\"id\":\"SPACE_ID_PLACE_HOLDER_liberty_hostsTable\",\"row\":1,\"size_x\":4,\"size_y\":2,\"type\":\"visualization\"},{\"col\":5,\"id\":\"SPACE_ID_PLACE_HOLDER_liberty_userDirsTable\",\"row\":1,\"size_x\":4,\"size_y\":2,\"type\":\"visualization\"},{\"col\":9,\"id\":\"SPACE_ID_PLACE_HOLDER_liberty_serversTable\",\"row\":1,\"size_x\":4,\"size_y\":2,\"type\":\"visualization\"},{\"col\":1,\"id\":\"SPACE_ID_PLACE_HOLDER_liberty_topMessageIds\",\"row\":3,\"size_x\":12,\"size_y\":3,\"type\":\"visualization\"},{\"col\":1,\"id\":\"SPACE_ID_PLACE_HOLDER_liberty_messageGraph\",\"row\":6,\"size_x\":4,\"size_y\":2,\"type\":\"visualization\"},{\"col\":9,\"id\":\"SPACE_ID_PLACE_HOLDER_liberty_ffdcGraph\",\"row\":6,\"size_x\":4,\"size_y\":2,\"type\":\"visualization\"},{\"col\":5,\"id\":\"SPACE_ID_PLACE_HOLDER_liberty_traceGraph\",\"row\":6,\"size_x\":4,\"size_y\":2,\"type\":\"visualization\"},{\"col\":1,\"columns\":[\"loglevel\",\"module\",\"message\",\"was_sequence\"],\"id\":\"SPACE_ID_PLACE_HOLDER_liberty_messageSearch\",\"row\":8,\"size_x\":12,\"size_y\":4,\"sort\":[\"was_sequence\",\"desc\"],\"type\":\"search\"},{\"col\":1,\"columns\":[\"loglevel\",\"module\",\"message\",\"was_sequence\"],\"id\":\"SPACE_ID_PLACE_HOLDER_liberty_traceSearch\",\"row\":12,\"size_x\":12,\"size_y\":4,\"sort\":[\"was_sequence\",\"desc\"],\"type\":\"search\"},{\"col\":1,\"columns\":[\"was_className\",\"was_ probeID\",\"was_exceptionName\",\"was_sequence\"],\"id\":\"SPACE_ID_PLACE_HOLDER_liberty_ffdcSearch\",\"row\":16,\"size_x\":12,\"size_y\":4,\"sort\":[\"was_sequence.raw\",\"desc\"],\"type\":\"search\"}]",
+      "timeRestore": false,
+      "title": "Liberty-Problems-K4-20161109",
+      "version": 1
+    }
+  },
+  {
+    "_id": "SPACE_ID_PLACE_HOLDER_Liberty-Traffic-K4-20161109",
+    "_type": "dashboard",
+    "_source": {
+      "description": "",
+      "group": "SPACE_ID_PLACE_HOLDER",
+      "hits": 0,
+      "kibanaSavedObjectMeta": {
+        "searchSourceJSON": "{\"filter\":[{\"query\":{\"query_string\":{\"query\":\"_type:liberty_accesslog\",\"analyze_wildcard\":true}}}]}"
+      },
+      "panelsJSON": "[{\"col\":1,\"id\":\"SPACE_ID_PLACE_HOLDER_liberty_hostsTable\",\"row\":1,\"size_x\":4,\"size_y\":2,\"type\":\"visualization\"},{\"col\":5,\"id\":\"SPACE_ID_PLACE_HOLDER_liberty_userDirsTable\",\"row\":1,\"size_x\":4,\"size_y\":2,\"type\":\"visualization\"},{\"col\":9,\"id\":\"SPACE_ID_PLACE_HOLDER_liberty_serversTable\",\"row\":1,\"size_x\":4,\"size_y\":2,\"type\":\"visualization\"},{\"col\":7,\"id\":\"SPACE_ID_PLACE_HOLDER_liberty_slowestURLs\",\"row\":5,\"size_x\":6,\"size_y\":3,\"type\":\"visualization\"},{\"col\":1,\"id\":\"SPACE_ID_PLACE_HOLDER_liberty_accessLogResponseCodeGraph\",\"row\":8,\"size_x\":4,\"size_y\":3,\"type\":\"visualization\"},{\"col\":9,\"id\":\"SPACE_ID_PLACE_HOLDER_liberty_accessLogElapsedTimeGraph\",\"row\":8,\"size_x\":4,\"size_y\":3,\"type\":\"visualization\"},{\"col\":1,\"columns\":[\"was_remoteHost\",\"was_uriPath\",\"was_responseCode\",\"was_bytesReceived\",\"was_elapsedTime\",\"was_sequence\"],\"id\":\"SPACE_ID_PLACE_HOLDER_liberty_accessLogSearch\",\"row\":11,\"size_x\":12,\"size_y\":4,\"sort\":[\"was_sequence.raw\",\"desc\"],\"type\":\"search\"},{\"col\":1,\"id\":\"SPACE_ID_PLACE_HOLDER_liberty_topURLs\",\"row\":5,\"size_x\":6,\"size_y\":3,\"type\":\"visualization\"},{\"col\":5,\"id\":\"SPACE_ID_PLACE_HOLDER_liberty_accessLogAverageElapsedTimeGraph\",\"row\":8,\"size_x\":4,\"size_y\":3,\"type\":\"visualization\"},{\"col\":1,\"id\":\"SPACE_ID_PLACE_HOLDER_liberty_accessLogMetrics\",\"row\":3,\"size_x\":12,\"size_y\":2,\"type\":\"visualization\"}]",
+      "timeRestore": false,
+      "title": "Liberty-Traffic-K4-20161109",
+      "version": 1
+    }
+  }
+]

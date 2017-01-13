@@ -1,0 +1,372 @@
+[
+  {
+    "_id": "SPACE_ID_PLACE_HOLDER_liberty_elapsedTimeGraph",
+    "_type": "visualization",
+    "_source": {
+      "description": "",
+      "group": "SPACE_ID_PLACE_HOLDER",
+      "kibanaSavedObjectMeta": {
+        "searchSourceJSON": "{\"filter\":[]}"
+      },
+      "savedSearchId": "SPACE_ID_PLACE_HOLDER_liberty_accessLogSearch",
+      "title": "liberty_elapsedTimeGraph",
+      "version": 1,
+      "visState": "{\"type\":\"line\",\"params\":{\"shareYAxis\":true,\"addTooltip\":true,\"addLegend\":true,\"showCircles\":true,\"smoothLines\":false,\"interpolate\":\"linear\",\"scale\":\"linear\",\"drawLinesBetweenPoints\":true,\"radiusRatio\":9,\"times\":[],\"addTimeMarker\":false,\"defaultYExtents\":false,\"setYExtents\":false,\"yAxis\":{}},\"aggs\":[{\"id\":\"1\",\"type\":\"avg\",\"schema\":\"metric\",\"params\":{\"field\":\"was_elapsedTime\"}},{\"id\":\"2\",\"type\":\"date_histogram\",\"schema\":\"segment\",\"params\":{\"field\":\"was_datetime\",\"interval\":\"auto\",\"customInterval\":\"2h\",\"min_doc_count\":1,\"extended_bounds\":{}}},{\"id\":\"3\",\"type\":\"terms\",\"schema\":\"group\",\"params\":{\"field\":\"was_uriPath.raw\",\"size\":5,\"order\":\"desc\",\"orderBy\":\"1\"}}],\"listeners\":{}}"
+    }
+  },
+  {
+    "_id": "SPACE_ID_PLACE_HOLDER_liberty_hotMessages",
+    "_type": "visualization",
+    "_source": {
+      "description": "",
+      "group": "SPACE_ID_PLACE_HOLDER",
+      "kibanaSavedObjectMeta": {
+        "searchSourceJSON": "{\"filter\":[]}"
+      },
+      "savedSearchId": "SPACE_ID_PLACE_HOLDER_liberty_messageSearch",
+      "title": "liberty_hotMessages",
+      "version": 1,
+      "visState": "{\"type\":\"histogram\",\"params\":{\"shareYAxis\":true,\"addTooltip\":true,\"addLegend\":true,\"scale\":\"linear\",\"mode\":\"stacked\",\"times\":[],\"addTimeMarker\":false,\"defaultYExtents\":false,\"setYExtents\":false,\"yAxis\":{}},\"aggs\":[{\"id\":\"1\",\"type\":\"count\",\"schema\":\"metric\",\"params\":{}},{\"id\":\"2\",\"type\":\"date_histogram\",\"schema\":\"segment\",\"params\":{\"field\":\"was_datetime\",\"interval\":\"m\",\"customInterval\":\"2h\",\"min_doc_count\":1,\"extended_bounds\":{}}},{\"id\":\"3\",\"type\":\"filters\",\"schema\":\"group\",\"params\":{\"filters\":[{\"input\":{\"query\":{\"query_string\":{\"query\":\"loglevel:FATAL\",\"analyze_wildcard\":true}}},\"label\":\"\"},{\"input\":{\"query\":{\"query_string\":{\"query\":\"loglevel:ERROR\",\"analyze_wildcard\":true}}}},{\"input\":{\"query\":{\"query_string\":{\"query\":\"loglevel:WARNING\",\"analyze_wildcard\":true}}}}]}}],\"listeners\":{}}"
+    }
+  },
+  {
+    "_id": "SPACE_ID_PLACE_HOLDER_liberty_ffdcCount",
+    "_type": "visualization",
+    "_source": {
+      "description": "",
+      "group": "SPACE_ID_PLACE_HOLDER",
+      "kibanaSavedObjectMeta": {
+        "searchSourceJSON": "{\"filter\":[]}"
+      },
+      "savedSearchId": "SPACE_ID_PLACE_HOLDER_liberty_ffdcSearch",
+      "title": "liberty_ffdcCount",
+      "version": 1,
+      "visState": "{\"type\":\"metric\",\"params\":{\"fontSize\":\"30\"},\"aggs\":[{\"id\":\"1\",\"type\":\"count\",\"schema\":\"metric\",\"params\":{}}],\"listeners\":{}}"
+    }
+  },
+  {
+    "_id": "SPACE_ID_PLACE_HOLDER_liberty_traceCount",
+    "_type": "visualization",
+    "_source": {
+      "description": "",
+      "group": "SPACE_ID_PLACE_HOLDER",
+      "kibanaSavedObjectMeta": {
+        "searchSourceJSON": "{\"filter\":[]}"
+      },
+      "savedSearchId": "SPACE_ID_PLACE_HOLDER_liberty_traceSearch",
+      "title": "liberty_traceCount",
+      "version": 1,
+      "visState": "{\"type\":\"metric\",\"params\":{\"fontSize\":\"30\"},\"aggs\":[{\"id\":\"1\",\"type\":\"count\",\"schema\":\"metric\",\"params\":{}}],\"listeners\":{}}"
+    }
+  },
+  {
+    "_id": "SPACE_ID_PLACE_HOLDER_liberty_accessLogElapsedTimeGraph",
+    "_type": "visualization",
+    "_source": {
+      "description": "",
+      "group": "SPACE_ID_PLACE_HOLDER",
+      "kibanaSavedObjectMeta": {
+        "searchSourceJSON": "{\"filter\":[]}"
+      },
+      "savedSearchId": "SPACE_ID_PLACE_HOLDER_liberty_accessLogSearch",
+      "title": "liberty_accessLogElapsedTimeGraph",
+      "version": 1,
+      "visState": "{\"type\":\"histogram\",\"params\":{\"shareYAxis\":true,\"addTooltip\":true,\"addLegend\":true,\"scale\":\"linear\",\"mode\":\"stacked\",\"times\":[],\"addTimeMarker\":false,\"defaultYExtents\":false,\"setYExtents\":false,\"yAxis\":{}},\"aggs\":[{\"id\":\"1\",\"type\":\"count\",\"schema\":\"metric\",\"params\":{}},{\"id\":\"2\",\"type\":\"date_histogram\",\"schema\":\"segment\",\"params\":{\"field\":\"was_datetime\",\"interval\":\"m\",\"customInterval\":\"2h\",\"min_doc_count\":1,\"extended_bounds\":{}}},{\"id\":\"3\",\"type\":\"range\",\"schema\":\"group\",\"params\":{\"field\":\"was_elapsedTime\",\"ranges\":[{\"from\":0,\"to\":250000},{\"from\":250000,\"to\":500000},{\"from\":500000,\"to\":1000000},{\"from\":1000000,\"to\":2000000},{\"from\":2000000}]}}],\"listeners\":{}}"
+    }
+  },
+  {
+    "_id": "SPACE_ID_PLACE_HOLDER_liberty_ffdcGraph",
+    "_type": "visualization",
+    "_source": {
+      "description": "",
+      "group": "SPACE_ID_PLACE_HOLDER",
+      "kibanaSavedObjectMeta": {
+        "searchSourceJSON": "{\"filter\":[]}"
+      },
+      "savedSearchId": "SPACE_ID_PLACE_HOLDER_liberty_ffdcSearch",
+      "title": "liberty_ffdcGraph",
+      "version": 1,
+      "visState": "{\"type\":\"histogram\",\"params\":{\"shareYAxis\":true,\"addTooltip\":true,\"addLegend\":true,\"scale\":\"linear\",\"mode\":\"stacked\",\"times\":[],\"addTimeMarker\":false,\"defaultYExtents\":false,\"setYExtents\":false,\"yAxis\":{}},\"aggs\":[{\"id\":\"1\",\"type\":\"count\",\"schema\":\"metric\",\"params\":{}},{\"id\":\"2\",\"type\":\"date_histogram\",\"schema\":\"segment\",\"params\":{\"field\":\"was_datetime\",\"interval\":\"m\",\"customInterval\":\"2h\",\"min_doc_count\":1,\"extended_bounds\":{}}}],\"listeners\":{}}"
+    }
+  },
+  {
+    "_id": "SPACE_ID_PLACE_HOLDER_liberty_slowHits",
+    "_type": "visualization",
+    "_source": {
+      "description": "",
+      "group": "SPACE_ID_PLACE_HOLDER",
+      "kibanaSavedObjectMeta": {
+        "searchSourceJSON": "{\"filter\":[]}"
+      },
+      "savedSearchId": "SPACE_ID_PLACE_HOLDER_liberty_accessLogSearch",
+      "title": "liberty_slowHits",
+      "version": 1,
+      "visState": "{\"type\":\"histogram\",\"params\":{\"shareYAxis\":true,\"addTooltip\":true,\"addLegend\":true,\"scale\":\"linear\",\"mode\":\"stacked\",\"times\":[],\"addTimeMarker\":false,\"defaultYExtents\":false,\"setYExtents\":false,\"yAxis\":{}},\"aggs\":[{\"id\":\"1\",\"type\":\"count\",\"schema\":\"metric\",\"params\":{}},{\"id\":\"2\",\"type\":\"date_histogram\",\"schema\":\"segment\",\"params\":{\"field\":\"was_datetime\",\"interval\":\"m\",\"customInterval\":\"2h\",\"min_doc_count\":1,\"extended_bounds\":{}}},{\"id\":\"3\",\"type\":\"range\",\"schema\":\"group\",\"params\":{\"field\":\"was_elapsedTime\",\"ranges\":[{\"from\":500000,\"to\":1000000},{\"from\":1000000}]}}],\"listeners\":{}}"
+    }
+  },
+  {
+    "_id": "SPACE_ID_PLACE_HOLDER_liberty_hotResponseCodes",
+    "_type": "visualization",
+    "_source": {
+      "description": "",
+      "group": "SPACE_ID_PLACE_HOLDER",
+      "kibanaSavedObjectMeta": {
+        "searchSourceJSON": "{\"filter\":[]}"
+      },
+      "savedSearchId": "SPACE_ID_PLACE_HOLDER_liberty_accessLogSearch",
+      "title": "liberty_hotResponseCodes",
+      "version": 1,
+      "visState": "{\"type\":\"histogram\",\"params\":{\"shareYAxis\":true,\"addTooltip\":true,\"addLegend\":true,\"scale\":\"linear\",\"mode\":\"stacked\",\"times\":[],\"addTimeMarker\":false,\"defaultYExtents\":false,\"setYExtents\":false,\"yAxis\":{}},\"aggs\":[{\"id\":\"1\",\"type\":\"count\",\"schema\":\"metric\",\"params\":{}},{\"id\":\"2\",\"type\":\"date_histogram\",\"schema\":\"segment\",\"params\":{\"field\":\"was_datetime\",\"interval\":\"m\",\"customInterval\":\"2h\",\"min_doc_count\":1,\"extended_bounds\":{}}},{\"id\":\"3\",\"type\":\"filters\",\"schema\":\"group\",\"params\":{\"filters\":[{\"input\":{\"query\":{\"query_string\":{\"query\":\"was_responseCode:[100 TO 199]\",\"analyze_wildcard\":true}}},\"label\":\"100s\"},{\"input\":{\"query\":{\"query_string\":{\"query\":\"was_responseCode:[300 TO 399]\",\"analyze_wildcard\":true}}},\"label\":\"300s\"},{\"input\":{\"query\":{\"query_string\":{\"query\":\"was_responseCode:[400 TO 499]\",\"analyze_wildcard\":true}}},\"label\":\"400s\"},{\"input\":{\"query\":{\"query_string\":{\"query\":\"was_responseCode:[500 TO 599]\",\"analyze_wildcard\":true}}},\"label\":\"500s\"}]}}],\"listeners\":{}}"
+    }
+  },
+  {
+    "_id": "SPACE_ID_PLACE_HOLDER_liberty_gcDuration",
+    "_type": "visualization",
+    "_source": {
+      "description": "",
+      "group": "SPACE_ID_PLACE_HOLDER",
+      "kibanaSavedObjectMeta": {
+        "searchSourceJSON": "{\"filter\":[]}"
+      },
+      "savedSearchId": "SPACE_ID_PLACE_HOLDER_liberty_gcSearch",
+      "title": "liberty_gcDuration",
+      "version": 1,
+      "visState": "{\"type\":\"line\",\"params\":{\"shareYAxis\":true,\"addTooltip\":true,\"addLegend\":true,\"showCircles\":true,\"smoothLines\":false,\"interpolate\":\"linear\",\"scale\":\"linear\",\"drawLinesBetweenPoints\":true,\"radiusRatio\":9,\"times\":[],\"addTimeMarker\":false,\"defaultYExtents\":false,\"setYExtents\":false,\"yAxis\":{}},\"aggs\":[{\"id\":\"1\",\"type\":\"avg\",\"schema\":\"metric\",\"params\":{\"field\":\"was_duration\"}},{\"id\":\"2\",\"type\":\"date_histogram\",\"schema\":\"segment\",\"params\":{\"field\":\"was_datetime\",\"interval\":\"m\",\"customInterval\":\"2h\",\"min_doc_count\":1,\"extended_bounds\":{}}}],\"listeners\":{}}"
+    }
+  },
+  {
+    "_id": "SPACE_ID_PLACE_HOLDER_liberty_accessLogResponseCodeGraph",
+    "_type": "visualization",
+    "_source": {
+      "description": "",
+      "group": "SPACE_ID_PLACE_HOLDER",
+      "kibanaSavedObjectMeta": {
+        "searchSourceJSON": "{\"filter\":[]}"
+      },
+      "savedSearchId": "SPACE_ID_PLACE_HOLDER_liberty_accessLogSearch",
+      "title": "liberty_accessLogResponseCodeGraph",
+      "version": 1,
+      "visState": "{\"type\":\"histogram\",\"params\":{\"shareYAxis\":true,\"addTooltip\":true,\"addLegend\":true,\"scale\":\"linear\",\"mode\":\"stacked\",\"times\":[],\"addTimeMarker\":false,\"defaultYExtents\":false,\"setYExtents\":false,\"yAxis\":{}},\"aggs\":[{\"id\":\"1\",\"type\":\"count\",\"schema\":\"metric\",\"params\":{}},{\"id\":\"2\",\"type\":\"date_histogram\",\"schema\":\"segment\",\"params\":{\"field\":\"was_datetime\",\"interval\":\"m\",\"customInterval\":\"2h\",\"min_doc_count\":1,\"extended_bounds\":{}}},{\"id\":\"3\",\"type\":\"terms\",\"schema\":\"group\",\"params\":{\"field\":\"was_responseCode\",\"size\":10,\"order\":\"desc\",\"orderBy\":\"1\"}}],\"listeners\":{}}"
+    }
+  },
+  {
+    "_id": "SPACE_ID_PLACE_HOLDER_liberty_gcHeap",
+    "_type": "visualization",
+    "_source": {
+      "description": "",
+      "group": "SPACE_ID_PLACE_HOLDER",
+      "kibanaSavedObjectMeta": {
+        "searchSourceJSON": "{\"filter\":[]}"
+      },
+      "savedSearchId": "SPACE_ID_PLACE_HOLDER_liberty_gcSearch",
+      "title": "liberty_gcHeap",
+      "version": 1,
+      "visState": "{\"type\":\"line\",\"params\":{\"shareYAxis\":true,\"addTooltip\":true,\"addLegend\":true,\"showCircles\":true,\"smoothLines\":false,\"interpolate\":\"linear\",\"scale\":\"linear\",\"drawLinesBetweenPoints\":true,\"radiusRatio\":9,\"times\":[],\"addTimeMarker\":false,\"defaultYExtents\":false,\"setYExtents\":false,\"yAxis\":{}},\"aggs\":[{\"id\":\"1\",\"type\":\"avg\",\"schema\":\"metric\",\"params\":{\"field\":\"was_heap\"}},{\"id\":\"2\",\"type\":\"date_histogram\",\"schema\":\"segment\",\"params\":{\"field\":\"was_datetime\",\"interval\":\"m\",\"customInterval\":\"2h\",\"min_doc_count\":1,\"extended_bounds\":{}}},{\"id\":\"3\",\"type\":\"avg\",\"schema\":\"metric\",\"params\":{\"field\":\"was_usedHeap\"}}],\"listeners\":{}}"
+    }
+  },
+  {
+    "_id": "SPACE_ID_PLACE_HOLDER_liberty_slowGC",
+    "_type": "visualization",
+    "_source": {
+      "description": "",
+      "group": "SPACE_ID_PLACE_HOLDER",
+      "kibanaSavedObjectMeta": {
+        "searchSourceJSON": "{\"index\":\"[logstash-SPACE_ID_PLACE_HOLDER-]YYYY.MM.DD\",\"query\":{\"query_string\":{\"query\":\"*\",\"analyze_wildcard\":true}},\"filter\":[]}"
+      },
+      "title": "liberty_slowGC",
+      "version": 1,
+      "visState": "{\"type\":\"histogram\",\"params\":{\"shareYAxis\":true,\"addTooltip\":true,\"addLegend\":true,\"scale\":\"linear\",\"mode\":\"stacked\",\"times\":[],\"addTimeMarker\":false,\"defaultYExtents\":false,\"setYExtents\":false,\"yAxis\":{}},\"aggs\":[{\"id\":\"1\",\"type\":\"count\",\"schema\":\"metric\",\"params\":{}},{\"id\":\"2\",\"type\":\"date_histogram\",\"schema\":\"segment\",\"params\":{\"field\":\"was_datetime\",\"interval\":\"m\",\"customInterval\":\"2h\",\"min_doc_count\":1,\"extended_bounds\":{}}},{\"id\":\"3\",\"type\":\"range\",\"schema\":\"group\",\"params\":{\"field\":\"was_duration\",\"ranges\":[{\"from\":1000000,\"to\":5000000},{\"from\":5000000}]}}],\"listeners\":{}}"
+    }
+  },
+  {
+    "_id": "SPACE_ID_PLACE_HOLDER_liberty_messageCount",
+    "_type": "visualization",
+    "_source": {
+      "description": "",
+      "group": "SPACE_ID_PLACE_HOLDER",
+      "kibanaSavedObjectMeta": {
+        "searchSourceJSON": "{\"index\":\"[logstash-SPACE_ID_PLACE_HOLDER-]YYYY.MM.DD\",\"query\":{\"query_string\":{\"analyze_wildcard\":true,\"query\":\"_type:liberty_message*\"}},\"filter\":[]}"
+      },
+      "title": "liberty_messageCount",
+      "version": 1,
+      "visState": "{\"type\":\"metric\",\"params\":{\"fontSize\":\"30\"},\"aggs\":[{\"id\":\"1\",\"type\":\"count\",\"schema\":\"metric\",\"params\":{}}],\"listeners\":{}}"
+    }
+  },
+  {
+    "_id": "SPACE_ID_PLACE_HOLDER_liberty_messageGraph",
+    "_type": "visualization",
+    "_source": {
+      "description": "",
+      "group": "SPACE_ID_PLACE_HOLDER",
+      "kibanaSavedObjectMeta": {
+        "searchSourceJSON": "{\"index\":\"[logstash-SPACE_ID_PLACE_HOLDER-]YYYY.MM.DD\",\"query\":{\"query_string\":{\"query\":\"_type:liberty_message*\",\"analyze_wildcard\":true}},\"filter\":[]}"
+      },
+      "title": "liberty_messageGraph",
+      "version": 1,
+      "visState": "{\"type\":\"histogram\",\"params\":{\"shareYAxis\":true,\"addTooltip\":true,\"addLegend\":true,\"scale\":\"linear\",\"mode\":\"stacked\",\"times\":[],\"addTimeMarker\":false,\"defaultYExtents\":false,\"setYExtents\":false,\"yAxis\":{}},\"aggs\":[{\"id\":\"1\",\"type\":\"count\",\"schema\":\"metric\",\"params\":{}},{\"id\":\"2\",\"type\":\"date_histogram\",\"schema\":\"segment\",\"params\":{\"field\":\"was_datetime\",\"interval\":\"m\",\"customInterval\":\"2h\",\"min_doc_count\":1,\"extended_bounds\":{}}},{\"id\":\"3\",\"type\":\"terms\",\"schema\":\"group\",\"params\":{\"field\":\"loglevel.raw\",\"size\":5,\"order\":\"desc\",\"orderBy\":\"1\"}}],\"listeners\":{}}"
+    }
+  },
+  {
+    "_id": "SPACE_ID_PLACE_HOLDER_liberty_accessLogCount",
+    "_type": "visualization",
+    "_source": {
+      "description": "",
+      "group": "SPACE_ID_PLACE_HOLDER",
+      "kibanaSavedObjectMeta": {
+        "searchSourceJSON": "{\"filter\":[],\"index\":\"[logstash-SPACE_ID_PLACE_HOLDER-]YYYY.MM.DD\",\"query\":{\"query_string\":{\"query\":\"type:access_log OR type:liberty_accesslog\",\"analyze_wildcard\":true}},\"highlight\":{\"pre_tags\":[\"@kibana-highlighted-field@\"],\"post_tags\":[\"@/kibana-highlighted-field@\"],\"fields\":{\"*\":{}},\"require_field_match\":false,\"fragment_size\":2147483647}}"
+      },
+      "title": "liberty_accessLogCount",
+      "version": 1,
+      "visState": "{\"type\":\"metric\",\"params\":{\"fontSize\":\"30\"},\"aggs\":[{\"id\":\"1\",\"type\":\"count\",\"schema\":\"metric\",\"params\":{}}],\"listeners\":{}}"
+    }
+  },
+  {
+    "_id": "SPACE_ID_PLACE_HOLDER_liberty_gcCount",
+    "_type": "visualization",
+    "_source": {
+      "description": "",
+      "group": "SPACE_ID_PLACE_HOLDER",
+      "kibanaSavedObjectMeta": {
+        "searchSourceJSON": "{\"index\":\"[logstash-SPACE_ID_PLACE_HOLDER-]YYYY.MM.DD\",\"query\":{\"query_string\":{\"analyze_wildcard\":true,\"query\":\"type:liberty_gc\"}},\"filter\":[]}"
+      },
+      "title": "liberty_gcCount",
+      "version": 1,
+      "visState": "{\"type\":\"metric\",\"params\":{\"fontSize\":\"30\"},\"aggs\":[{\"id\":\"1\",\"type\":\"count\",\"schema\":\"metric\",\"params\":{}}],\"listeners\":{}}"
+    }
+  },
+  {
+    "_id": "SPACE_ID_PLACE_HOLDER_liberty_topMessageIds",
+    "_type": "visualization",
+    "_source": {
+      "description": "",
+      "group": "SPACE_ID_PLACE_HOLDER",
+      "kibanaSavedObjectMeta": {
+        "searchSourceJSON": "{\"filter\":[]}"
+      },
+      "savedSearchId": "SPACE_ID_PLACE_HOLDER_liberty_messageSearch",
+      "title": "liberty_topMessageIds",
+      "version": 1,
+      "visState": "{\"type\":\"histogram\",\"params\":{\"shareYAxis\":true,\"addTooltip\":true,\"addLegend\":true,\"scale\":\"linear\",\"mode\":\"stacked\",\"times\":[],\"addTimeMarker\":false,\"defaultYExtents\":false,\"setYExtents\":false,\"yAxis\":{}},\"aggs\":[{\"id\":\"1\",\"type\":\"count\",\"schema\":\"metric\",\"params\":{}},{\"id\":\"2\",\"type\":\"date_histogram\",\"schema\":\"segment\",\"params\":{\"field\":\"was_datetime\",\"interval\":\"m\",\"customInterval\":\"2h\",\"min_doc_count\":1,\"extended_bounds\":{}}},{\"id\":\"3\",\"type\":\"terms\",\"schema\":\"group\",\"params\":{\"field\":\"was_messageId.raw\",\"size\":5,\"order\":\"desc\",\"orderBy\":\"1\"}}],\"listeners\":{}}"
+    }
+  },
+  {
+    "_id": "SPACE_ID_PLACE_HOLDER_liberty_serversTable",
+    "_type": "visualization",
+    "_source": {
+      "description": "",
+      "group": "SPACE_ID_PLACE_HOLDER",
+      "kibanaSavedObjectMeta": {
+        "searchSourceJSON": "{\"filter\":[]}"
+      },
+      "savedSearchId": "SPACE_ID_PLACE_HOLDER_liberty_all",
+      "title": "liberty_serversTable",
+      "version": 1,
+      "visState": "{\"type\":\"table\",\"params\":{\"perPage\":10,\"showPartialRows\":false,\"showMeticsAtAllLevels\":false},\"aggs\":[{\"id\":\"1\",\"type\":\"count\",\"schema\":\"metric\",\"params\":{}},{\"id\":\"2\",\"type\":\"terms\",\"schema\":\"bucket\",\"params\":{\"field\":\"was_serverName.raw\",\"size\":5,\"order\":\"desc\",\"orderBy\":\"1\"}}],\"listeners\":{}}"
+    }
+  },
+  {
+    "_id": "SPACE_ID_PLACE_HOLDER_liberty_userDirsTable",
+    "_type": "visualization",
+    "_source": {
+      "description": "",
+      "group": "SPACE_ID_PLACE_HOLDER",
+      "kibanaSavedObjectMeta": {
+        "searchSourceJSON": "{\"filter\":[]}"
+      },
+      "savedSearchId": "SPACE_ID_PLACE_HOLDER_liberty_all",
+      "title": "liberty_userDirsTable",
+      "version": 1,
+      "visState": "{\"type\":\"table\",\"params\":{\"perPage\":10,\"showPartialRows\":false,\"showMeticsAtAllLevels\":false},\"aggs\":[{\"id\":\"1\",\"type\":\"count\",\"schema\":\"metric\",\"params\":{}},{\"id\":\"2\",\"type\":\"terms\",\"schema\":\"bucket\",\"params\":{\"field\":\"was_userDir.raw\",\"size\":5,\"order\":\"desc\",\"orderBy\":\"1\"}}],\"listeners\":{}}"
+    }
+  },
+  {
+    "_id": "SPACE_ID_PLACE_HOLDER_liberty_hostsTable",
+    "_type": "visualization",
+    "_source": {
+      "description": "",
+      "group": "SPACE_ID_PLACE_HOLDER",
+      "kibanaSavedObjectMeta": {
+        "searchSourceJSON": "{\"filter\":[]}"
+      },
+      "savedSearchId": "SPACE_ID_PLACE_HOLDER_liberty_all",
+      "title": "liberty_hostsTable",
+      "version": 1,
+      "visState": "{\"aggs\":[{\"id\":\"1\",\"params\":{},\"schema\":\"metric\",\"type\":\"count\"},{\"id\":\"2\",\"params\":{\"field\":\"host.raw\",\"order\":\"desc\",\"orderBy\":\"1\",\"size\":5},\"schema\":\"bucket\",\"type\":\"terms\"}],\"listeners\":{},\"params\":{\"perPage\":10,\"showMeticsAtAllLevels\":false,\"showPartialRows\":false},\"type\":\"table\"}"
+    }
+  },
+  {
+    "_id": "SPACE_ID_PLACE_HOLDER_liberty_traceGraph",
+    "_type": "visualization",
+    "_source": {
+      "description": "",
+      "group": "SPACE_ID_PLACE_HOLDER",
+      "kibanaSavedObjectMeta": {
+        "searchSourceJSON": "{\"filter\":[]}"
+      },
+      "savedSearchId": "SPACE_ID_PLACE_HOLDER_liberty_traceSearch",
+      "title": "liberty_traceGraph",
+      "version": 1,
+      "visState": "{\"type\":\"histogram\",\"params\":{\"shareYAxis\":true,\"addTooltip\":true,\"addLegend\":true,\"scale\":\"linear\",\"mode\":\"stacked\",\"times\":[],\"addTimeMarker\":false,\"defaultYExtents\":false,\"setYExtents\":false,\"yAxis\":{}},\"aggs\":[{\"id\":\"1\",\"type\":\"count\",\"schema\":\"metric\",\"params\":{}},{\"id\":\"2\",\"type\":\"date_histogram\",\"schema\":\"segment\",\"params\":{\"field\":\"was_datetime\",\"interval\":\"m\",\"customInterval\":\"2h\",\"min_doc_count\":1,\"extended_bounds\":{}}},{\"id\":\"3\",\"type\":\"terms\",\"schema\":\"group\",\"params\":{\"field\":\"loglevel.raw\",\"size\":5,\"order\":\"desc\",\"orderBy\":\"1\"}}],\"listeners\":{}}"
+    }
+  },
+  {
+    "_id": "SPACE_ID_PLACE_HOLDER_liberty_accessLogAverageElapsedTimeGraph",
+    "_type": "visualization",
+    "_source": {
+      "description": "",
+      "group": "SPACE_ID_PLACE_HOLDER",
+      "kibanaSavedObjectMeta": {
+        "searchSourceJSON": "{\"filter\":[]}"
+      },
+      "savedSearchId": "SPACE_ID_PLACE_HOLDER_liberty_accessLogSearch",
+      "title": "liberty_accessLogAverageElapsedTimeGraph",
+      "version": 1,
+      "visState": "{\"type\":\"line\",\"params\":{\"shareYAxis\":true,\"addTooltip\":true,\"addLegend\":true,\"showCircles\":true,\"smoothLines\":false,\"interpolate\":\"linear\",\"scale\":\"linear\",\"drawLinesBetweenPoints\":true,\"radiusRatio\":9,\"times\":[],\"addTimeMarker\":false,\"defaultYExtents\":false,\"setYExtents\":false,\"yAxis\":{}},\"aggs\":[{\"id\":\"1\",\"type\":\"avg\",\"schema\":\"metric\",\"params\":{\"field\":\"was_elapsedTime\"}},{\"id\":\"2\",\"type\":\"date_histogram\",\"schema\":\"segment\",\"params\":{\"field\":\"was_datetime\",\"interval\":\"m\",\"customInterval\":\"2h\",\"min_doc_count\":1,\"extended_bounds\":{}}}],\"listeners\":{}}"
+    }
+  },
+  {
+    "_id": "SPACE_ID_PLACE_HOLDER_liberty_accessLogMetrics",
+    "_type": "visualization",
+    "_source": {
+      "description": "",
+      "group": "SPACE_ID_PLACE_HOLDER",
+      "kibanaSavedObjectMeta": {
+        "searchSourceJSON": "{\"filter\":[]}"
+      },
+      "savedSearchId": "SPACE_ID_PLACE_HOLDER_liberty_accessLogSearch",
+      "title": "liberty_accessLogMetrics",
+      "version": 1,
+      "visState": "{\"type\":\"metric\",\"params\":{\"fontSize\":60},\"aggs\":[{\"id\":\"1\",\"type\":\"count\",\"schema\":\"metric\",\"params\":{}},{\"id\":\"2\",\"type\":\"avg\",\"schema\":\"metric\",\"params\":{\"field\":\"was_elapsedTime\"}}],\"listeners\":{}}"
+    }
+  },
+  {
+    "_id": "SPACE_ID_PLACE_HOLDER_liberty_slowestURLs",
+    "_type": "visualization",
+    "_source": {
+      "description": "",
+      "group": "SPACE_ID_PLACE_HOLDER",
+      "kibanaSavedObjectMeta": {
+        "searchSourceJSON": "{\"filter\":[]}"
+      },
+      "savedSearchId": "SPACE_ID_PLACE_HOLDER_liberty_accessLogSearch",
+      "title": "liberty_slowestURLs",
+      "version": 1,
+      "visState": "{\"type\":\"table\",\"params\":{\"perPage\":10,\"showPartialRows\":false,\"showMeticsAtAllLevels\":false},\"aggs\":[{\"id\":\"2\",\"type\":\"terms\",\"schema\":\"bucket\",\"params\":{\"field\":\"was_uriPath.raw\",\"size\":10,\"order\":\"desc\",\"orderBy\":\"custom\",\"orderAgg\":{\"id\":\"2-orderAgg\",\"type\":\"avg\",\"schema\":\"orderAgg\",\"params\":{\"field\":\"was_elapsedTime\"}}}},{\"id\":\"4\",\"type\":\"count\",\"schema\":\"metric\",\"params\":{}},{\"id\":\"3\",\"type\":\"avg\",\"schema\":\"metric\",\"params\":{\"field\":\"was_elapsedTime\"}},{\"id\":\"5\",\"type\":\"min\",\"schema\":\"metric\",\"params\":{\"field\":\"was_elapsedTime\"}},{\"id\":\"1\",\"type\":\"max\",\"schema\":\"metric\",\"params\":{\"field\":\"was_elapsedTime\"}}],\"listeners\":{}}"
+    }
+  },
+  {
+    "_id": "SPACE_ID_PLACE_HOLDER_liberty_topURLs",
+    "_type": "visualization",
+    "_source": {
+      "description": "",
+      "group": "SPACE_ID_PLACE_HOLDER",
+      "kibanaSavedObjectMeta": {
+        "searchSourceJSON": "{\"filter\":[]}"
+      },
+      "savedSearchId": "SPACE_ID_PLACE_HOLDER_liberty_accessLogSearch",
+      "title": "liberty_topURLs",
+      "version": 1,
+      "visState": "{\"type\":\"table\",\"params\":{\"perPage\":10,\"showPartialRows\":false,\"showMeticsAtAllLevels\":false},\"aggs\":[{\"id\":\"1\",\"type\":\"count\",\"schema\":\"metric\",\"params\":{}},{\"id\":\"2\",\"type\":\"terms\",\"schema\":\"bucket\",\"params\":{\"field\":\"was_uriPath.raw\",\"size\":10,\"order\":\"desc\",\"orderBy\":\"1\"}},{\"id\":\"3\",\"type\":\"avg\",\"schema\":\"metric\",\"params\":{\"field\":\"was_elapsedTime\"}},{\"id\":\"4\",\"type\":\"min\",\"schema\":\"metric\",\"params\":{\"field\":\"was_elapsedTime\"}},{\"id\":\"5\",\"type\":\"max\",\"schema\":\"metric\",\"params\":{\"field\":\"was_elapsedTime\"}}],\"listeners\":{}}"
+    }
+  }
+]

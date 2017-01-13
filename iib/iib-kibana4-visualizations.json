@@ -1,0 +1,77 @@
+[
+  {
+    "_id": "SPACE_ID_PLACE_HOLDER_All-IIB-Integration-Servers-Start,-Stop-and-Change-Events",
+    "_type": "visualization",
+    "_source": {
+      "description": "",
+      "group": "SPACE_ID_PLACE_HOLDER",
+      "kibanaSavedObjectMeta": {
+        "searchSourceJSON": "{\"filter\":[]}"
+      },
+      "savedSearchId": "SPACE_ID_PLACE_HOLDER_IIB-Log-Events",
+      "title": "All IIB Integration Servers Start, Stop  and Change Events",
+      "version": 1,
+      "visState": "{\"type\":\"line\",\"params\":{\"shareYAxis\":true,\"addTooltip\":true,\"addLegend\":true,\"showCircles\":true,\"smoothLines\":false,\"interpolate\":\"linear\",\"scale\":\"linear\",\"drawLinesBetweenPoints\":true,\"radiusRatio\":9,\"times\":[],\"addTimeMarker\":false,\"defaultYExtents\":false,\"setYExtents\":false,\"yAxis\":{}},\"aggs\":[{\"id\":\"1\",\"type\":\"count\",\"schema\":\"metric\",\"params\":{}},{\"id\":\"2\",\"type\":\"date_histogram\",\"schema\":\"segment\",\"params\":{\"field\":\"@timestamp\",\"interval\":\"auto\",\"customInterval\":\"2h\",\"min_doc_count\":1,\"extended_bounds\":{}}},{\"id\":\"3\",\"type\":\"filters\",\"schema\":\"group\",\"params\":{\"filters\":[{\"input\":{\"query\":{\"query_string\":{\"query\":\"ibm_messageId:2153 AND message:Start\",\"analyze_wildcard\":true}}},\"label\":\"Server Starting\"},{\"input\":{\"query\":{\"query_string\":{\"query\":\"ibm_messageId:2153 AND message:Stop\",\"analyze_wildcard\":true}}},\"label\":\"Server Stopping\"},{\"input\":{\"query\":{\"query_string\":{\"query\":\"ibm_messageId:2152\",\"analyze_wildcard\":true}}},\"label\":\"Server Changing\"}]}}],\"listeners\":{}}"
+    }
+  },
+  {
+    "_id": "SPACE_ID_PLACE_HOLDER_IBM-Integration-Bus-Message-Logs",
+    "_type": "visualization",
+    "_source": {
+      "description": "",
+      "group": "SPACE_ID_PLACE_HOLDER",
+      "kibanaSavedObjectMeta": {
+        "searchSourceJSON": "{\"filter\":[]}"
+      },
+      "savedSearchId": "SPACE_ID_PLACE_HOLDER_IIB-Log-Events",
+      "title": "IBM Integration Bus Message Logs",
+      "version": 1,
+      "visState": "{\"type\":\"histogram\",\"params\":{\"shareYAxis\":true,\"addTooltip\":true,\"addLegend\":true,\"scale\":\"linear\",\"mode\":\"stacked\",\"times\":[],\"addTimeMarker\":false,\"defaultYExtents\":false,\"setYExtents\":false,\"yAxis\":{}},\"aggs\":[{\"id\":\"1\",\"type\":\"count\",\"schema\":\"metric\",\"params\":{}},{\"id\":\"2\",\"type\":\"date_histogram\",\"schema\":\"segment\",\"params\":{\"field\":\"@timestamp\",\"interval\":\"auto\",\"customInterval\":\"2h\",\"min_doc_count\":1,\"extended_bounds\":{}}},{\"id\":\"3\",\"type\":\"terms\",\"schema\":\"group\",\"params\":{\"field\":\"loglevel.raw\",\"size\":5,\"order\":\"desc\",\"orderBy\":\"1\"}}],\"listeners\":{}}"
+    }
+  },
+  {
+    "_id": "SPACE_ID_PLACE_HOLDER_Top-5-Hosts-Generating-Most-Log-Events",
+    "_type": "visualization",
+    "_source": {
+      "description": "",
+      "group": "SPACE_ID_PLACE_HOLDER",
+      "kibanaSavedObjectMeta": {
+        "searchSourceJSON": "{\"filter\":[{\"meta\":{\"disabled\":false,\"index\":\"[logstash-SPACE_ID_PLACE_HOLDER-]YYYY.MM.DD\",\"key\":\"_type\",\"negate\":false,\"value\":\"iib_message\"},\"query\":{\"match\":{\"_type\":{\"query\":\"iib_message\",\"type\":\"phrase\"}}}}]}"
+      },
+      "savedSearchId": "SPACE_ID_PLACE_HOLDER_IIB-Log-Events",
+      "title": "Top 5 Hosts Generating Most Log Events",
+      "version": 1,
+      "visState": "{\"aggs\":[{\"id\":\"1\",\"params\":{},\"schema\":\"metric\",\"type\":\"count\"},{\"id\":\"2\",\"params\":{\"field\":\"host.raw\",\"order\":\"desc\",\"orderBy\":\"1\",\"size\":5},\"schema\":\"bucket\",\"type\":\"terms\"}],\"listeners\":{},\"params\":{\"perPage\":5,\"showMeticsAtAllLevels\":false,\"showPartialRows\":false},\"type\":\"table\"}"
+    }
+  },
+  {
+    "_id": "SPACE_ID_PLACE_HOLDER_Top-5-Log-Events",
+    "_type": "visualization",
+    "_source": {
+      "description": "",
+      "group": "SPACE_ID_PLACE_HOLDER",
+      "kibanaSavedObjectMeta": {
+        "searchSourceJSON": "{\"filter\":[]}"
+      },
+      "savedSearchId": "SPACE_ID_PLACE_HOLDER_IIB-Log-Events",
+      "title": "Top 5 Log Events",
+      "version": 1,
+      "visState": "{\"aggs\":[{\"id\":\"1\",\"params\":{},\"schema\":\"metric\",\"type\":\"count\"},{\"id\":\"2\",\"params\":{\"customInterval\":\"2h\",\"extended_bounds\":{},\"field\":\"@timestamp\",\"interval\":\"auto\",\"min_doc_count\":1},\"schema\":\"segment\",\"type\":\"date_histogram\"},{\"id\":\"3\",\"params\":{\"field\":\"ibm_messageId.raw\",\"order\":\"desc\",\"orderBy\":\"1\",\"size\":5},\"schema\":\"group\",\"type\":\"terms\"}],\"listeners\":{},\"params\":{\"addLegend\":true,\"addTimeMarker\":false,\"addTooltip\":true,\"defaultYExtents\":false,\"mode\":\"stacked\",\"scale\":\"linear\",\"setYExtents\":false,\"shareYAxis\":true,\"times\":[],\"yAxis\":{}},\"type\":\"histogram\"}"
+    }
+  },
+  {
+    "_id": "SPACE_ID_PLACE_HOLDER_Top-5-Integration-Servers-Generating-Most-Log-Events",
+    "_type": "visualization",
+    "_source": {
+      "description": "",
+      "group": "SPACE_ID_PLACE_HOLDER",
+      "kibanaSavedObjectMeta": {
+        "searchSourceJSON": "{\"filter\":[]}"
+      },
+      "savedSearchId": "SPACE_ID_PLACE_HOLDER_IIB-Log-Events",
+      "title": "Top 5 Integration Servers Generating Most Log Events",
+      "version": 1,
+      "visState": "{\"type\":\"table\",\"params\":{\"perPage\":5,\"showPartialRows\":false,\"showMeticsAtAllLevels\":false},\"aggs\":[{\"id\":\"1\",\"type\":\"count\",\"schema\":\"metric\",\"params\":{}},{\"id\":\"2\",\"type\":\"terms\",\"schema\":\"bucket\",\"params\":{\"field\":\"module.raw\",\"size\":5,\"order\":\"desc\",\"orderBy\":\"1\"}}],\"listeners\":{}}"
+    }
+  }
+]
