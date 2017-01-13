@@ -1,0 +1,94 @@
+[
+  {
+    "_id": "SPACE_ID_PLACE_HOLDER_twas_all",
+    "_type": "search",
+    "_source": {
+      "columns": [
+        "_source"
+      ],
+      "description": "",
+      "group": "SPACE_ID_PLACE_HOLDER",
+      "hits": 0,
+      "kibanaSavedObjectMeta": {
+        "searchSourceJSON": "{\"index\":\"[logstash-SPACE_ID_PLACE_HOLDER-]YYYY.MM.DD\",\"highlight\":{\"pre_tags\":[\"@kibana-highlighted-field@\"],\"post_tags\":[\"@/kibana-highlighted-field@\"],\"fields\":{\"*\":{}},\"fragment_size\":2147483647},\"filter\":[],\"query\":{\"query_string\":{\"query\":\"_type:twas_*\",\"analyze_wildcard\":true}}}"
+      },
+      "sort": [
+        "was_datetime",
+        "desc"
+      ],
+      "title": "twas_all",
+      "version": 1
+    }
+  },
+  {
+    "_id": "SPACE_ID_PLACE_HOLDER_twas_messageSearch",
+    "_type": "search",
+    "_source": {
+      "columns": [
+        "loglevel",
+        "module",
+        "message",
+        "ibm_sequence"
+      ],
+      "description": "",
+      "group": "SPACE_ID_PLACE_HOLDER",
+      "hits": 0,
+      "kibanaSavedObjectMeta": {
+        "searchSourceJSON": "{\"index\":\"[logstash-SPACE_ID_PLACE_HOLDER-]YYYY.MM.DD\",\"query\":{\"query_string\":{\"query\":\"_type:twas_systemout OR _type:twas_systemerr\",\"analyze_wildcard\":true}},\"filter\":[],\"highlight\":{\"pre_tags\":[\"@kibana-highlighted-field@\"],\"post_tags\":[\"@/kibana-highlighted-field@\"],\"fields\":{\"*\":{}},\"fragment_size\":2147483647}}"
+      },
+      "sort": [
+        "ibm_sequence",
+        "desc"
+      ],
+      "title": "twas_messageSearch",
+      "version": 1
+    }
+  },
+  {
+    "_id": "SPACE_ID_PLACE_HOLDER_twas_badHits",
+    "_type": "search",
+    "_source": {
+      "columns": [
+        "_source"
+      ],
+      "description": "",
+      "group": "SPACE_ID_PLACE_HOLDER",
+      "hits": 0,
+      "kibanaSavedObjectMeta": {
+        "searchSourceJSON": "{\"index\":\"[logstash-SPACE_ID_PLACE_HOLDER-]YYYY.MM.DD\",\"highlight\":{\"pre_tags\":[\"@kibana-highlighted-field@\"],\"post_tags\":[\"@/kibana-highlighted-field@\"],\"fields\":{\"*\":{}},\"fragment_size\":2147483647},\"filter\":[],\"query\":{\"query_string\":{\"query\":\"type:\\\"twas_accesslog\\\" AND !was_responseCode:\\\"200\\\"\",\"analyze_wildcard\":true}}}"
+      },
+      "sort": [
+        "was_datetime",
+        "desc"
+      ],
+      "title": "twas_badHits",
+      "version": 1
+    }
+  },
+  {
+    "_id": "SPACE_ID_PLACE_HOLDER_twas_accessLogSearch",
+    "_type": "search",
+    "_source": {
+      "columns": [
+        "was_remoteHost",
+        "was_uriPath",
+        "was_responseCode",
+        "was_bytesReceived",
+        "was_elapsedTime",
+        "ibm_sequence"
+      ],
+      "description": "",
+      "group": "SPACE_ID_PLACE_HOLDER",
+      "hits": 0,
+      "kibanaSavedObjectMeta": {
+        "searchSourceJSON": "{\"index\":\"[logstash-SPACE_ID_PLACE_HOLDER-]YYYY.MM.DD\",\"query\":{\"query_string\":{\"query\":\"type:twas_accesslog\",\"analyze_wildcard\":true}},\"filter\":[],\"highlight\":{\"pre_tags\":[\"@kibana-highlighted-field@\"],\"post_tags\":[\"@/kibana-highlighted-field@\"],\"fields\":{\"*\":{}},\"fragment_size\":2147483647}}"
+      },
+      "sort": [
+        "ibm_sequence.raw",
+        "desc"
+      ],
+      "title": "twas_accessLogSearch",
+      "version": 1
+    }
+  }
+]

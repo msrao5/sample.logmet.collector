@@ -1,0 +1,28 @@
+[
+  {
+    "_id": "SPACE_ID_PLACE_HOLDER_IIB-Log-Events",
+    "_type": "search",
+    "_source": {
+      "columns": [
+        "loglevel",
+        "module",
+        "ibm_messageId",
+        "host",
+        "_type",
+        "message"
+      ],
+      "description": "",
+      "group": "SPACE_ID_PLACE_HOLDER",
+      "hits": 0,
+      "kibanaSavedObjectMeta": {
+        "searchSourceJSON": "{\"index\":\"[logstash-SPACE_ID_PLACE_HOLDER-]YYYY.MM.DD\",\"query\":{\"query_string\":{\"analyze_wildcard\":true,\"query\":\"*\"}},\"highlight\":{\"pre_tags\":[\"@kibana-highlighted-field@\"],\"post_tags\":[\"@/kibana-highlighted-field@\"],\"fields\":{\"*\":{}},\"fragment_size\":2147483647},\"filter\":[{\"meta\":{\"negate\":false,\"index\":\"[logstash-SPACE_ID_PLACE_HOLDER-]YYYY.MM.DD\",\"key\":\"_type\",\"value\":\"iib_message\",\"disabled\":false},\"query\":{\"match\":{\"_type\":{\"query\":\"iib_message\",\"type\":\"phrase\"}}}}]}"
+      },
+      "sort": [
+        "@timestamp",
+        "desc"
+      ],
+      "title": "IIB Log Events",
+      "version": 1
+    }
+  }
+]
