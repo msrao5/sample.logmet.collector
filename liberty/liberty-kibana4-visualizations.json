@@ -1,5 +1,20 @@
 [
   {
+    "_id": "SPACE_ID_PLACE_HOLDER_liberty_tagsTable",
+    "_type": "visualization",
+    "_source": {
+      "description": "",
+      "group": "SPACE_ID_PLACE_HOLDER",
+      "kibanaSavedObjectMeta": {
+        "searchSourceJSON": "{\"filter\":[]}"
+      },
+      "savedSearchId": "SPACE_ID_PLACE_HOLDER_liberty_all",
+      "title": "liberty_tagsTable",
+      "version": 1,
+      "visState": "{\"type\":\"table\",\"params\":{\"perPage\":10,\"showPartialRows\":false,\"showMeticsAtAllLevels\":false},\"aggs\":[{\"id\":\"1\",\"type\":\"count\",\"schema\":\"metric\",\"params\":{}},{\"id\":\"2\",\"type\":\"terms\",\"schema\":\"bucket\",\"params\":{\"field\":\"was_tags.raw\",\"size\":5,\"order\":\"desc\",\"orderBy\":\"1\"}}],\"listeners\":{}}"
+    }
+  },
+  {
     "_id": "SPACE_ID_PLACE_HOLDER_liberty_elapsedTimeGraph",
     "_type": "visualization",
     "_source": {
@@ -310,21 +325,6 @@
     }
   },
   {
-    "_id": "SPACE_ID_PLACE_HOLDER_liberty_accessLogAverageElapsedTimeGraph",
-    "_type": "visualization",
-    "_source": {
-      "description": "",
-      "group": "SPACE_ID_PLACE_HOLDER",
-      "kibanaSavedObjectMeta": {
-        "searchSourceJSON": "{\"filter\":[]}"
-      },
-      "savedSearchId": "SPACE_ID_PLACE_HOLDER_liberty_accessLogSearch",
-      "title": "liberty_accessLogAverageElapsedTimeGraph",
-      "version": 1,
-      "visState": "{\"type\":\"line\",\"params\":{\"shareYAxis\":true,\"addTooltip\":true,\"addLegend\":true,\"showCircles\":true,\"smoothLines\":false,\"interpolate\":\"linear\",\"scale\":\"linear\",\"drawLinesBetweenPoints\":true,\"radiusRatio\":9,\"times\":[],\"addTimeMarker\":false,\"defaultYExtents\":false,\"setYExtents\":false,\"yAxis\":{}},\"aggs\":[{\"id\":\"1\",\"type\":\"avg\",\"schema\":\"metric\",\"params\":{\"field\":\"was_elapsedTime\"}},{\"id\":\"2\",\"type\":\"date_histogram\",\"schema\":\"segment\",\"params\":{\"field\":\"was_datetime\",\"interval\":\"m\",\"customInterval\":\"2h\",\"min_doc_count\":1,\"extended_bounds\":{}}}],\"listeners\":{}}"
-    }
-  },
-  {
     "_id": "SPACE_ID_PLACE_HOLDER_liberty_accessLogMetrics",
     "_type": "visualization",
     "_source": {
@@ -367,6 +367,21 @@
       "title": "liberty_topURLs",
       "version": 1,
       "visState": "{\"type\":\"table\",\"params\":{\"perPage\":10,\"showPartialRows\":false,\"showMeticsAtAllLevels\":false},\"aggs\":[{\"id\":\"1\",\"type\":\"count\",\"schema\":\"metric\",\"params\":{}},{\"id\":\"2\",\"type\":\"terms\",\"schema\":\"bucket\",\"params\":{\"field\":\"was_uriPath.raw\",\"size\":10,\"order\":\"desc\",\"orderBy\":\"1\"}},{\"id\":\"3\",\"type\":\"avg\",\"schema\":\"metric\",\"params\":{\"field\":\"was_elapsedTime\"}},{\"id\":\"4\",\"type\":\"min\",\"schema\":\"metric\",\"params\":{\"field\":\"was_elapsedTime\"}},{\"id\":\"5\",\"type\":\"max\",\"schema\":\"metric\",\"params\":{\"field\":\"was_elapsedTime\"}}],\"listeners\":{}}"
+    }
+  },
+  {
+    "_id": "SPACE_ID_PLACE_HOLDER_liberty_accessLogAverageElapsedTimeGraph",
+    "_type": "visualization",
+    "_source": {
+      "description": "",
+      "group": "SPACE_ID_PLACE_HOLDER",
+      "kibanaSavedObjectMeta": {
+        "searchSourceJSON": "{\"filter\":[]}"
+      },
+      "savedSearchId": "SPACE_ID_PLACE_HOLDER_liberty_accessLogSearch",
+      "title": "liberty_accessLogAverageElapsedTimeGraph",
+      "version": 1,
+      "visState": "{\"type\":\"line\",\"params\":{\"shareYAxis\":true,\"addTooltip\":true,\"addLegend\":false,\"showCircles\":true,\"smoothLines\":false,\"interpolate\":\"linear\",\"scale\":\"linear\",\"drawLinesBetweenPoints\":true,\"radiusRatio\":9,\"times\":[],\"addTimeMarker\":false,\"defaultYExtents\":false,\"setYExtents\":false,\"yAxis\":{}},\"aggs\":[{\"id\":\"1\",\"type\":\"avg\",\"schema\":\"metric\",\"params\":{\"field\":\"was_elapsedTime\"}},{\"id\":\"2\",\"type\":\"date_histogram\",\"schema\":\"segment\",\"params\":{\"field\":\"was_datetime\",\"interval\":\"m\",\"customInterval\":\"2h\",\"min_doc_count\":1,\"extended_bounds\":{}}}],\"listeners\":{}}"
     }
   }
 ]
