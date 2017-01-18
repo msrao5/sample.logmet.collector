@@ -1,5 +1,5 @@
 {
-  "title": "Liberty-K3-20160922",
+  "title": "Liberty-K3-20170119",
   "services": {
     "query": {
       "list": {
@@ -136,7 +136,7 @@
           "pin": true,
           "type": "lucene",
           "enable": true,
-          "query": "(_type:access_log OR _type:liberty_accesslog) AND was_responseCode:[100 TO 199]"
+          "query": "(_type:access_log OR _type:liberty_accesslog) AND ibm_responseCode:[100 TO 199]"
         },
         "15": {
           "id": 15,
@@ -145,7 +145,7 @@
           "pin": true,
           "type": "lucene",
           "enable": true,
-          "query": "(_type:access_log OR _type:liberty_accesslog) AND was_responseCode:[200 TO 299]"
+          "query": "(_type:access_log OR _type:liberty_accesslog) AND ibm_responseCode:[200 TO 299]"
         },
         "16": {
           "id": 16,
@@ -154,7 +154,7 @@
           "pin": true,
           "type": "lucene",
           "enable": true,
-          "query": "(_type:access_log OR _type:liberty_accesslog) AND was_responseCode:[300 TO 399]"
+          "query": "(_type:access_log OR _type:liberty_accesslog) AND ibm_responseCode:[300 TO 399]"
         },
         "17": {
           "id": 17,
@@ -163,7 +163,7 @@
           "pin": true,
           "type": "lucene",
           "enable": true,
-          "query": "(_type:access_log OR _type:liberty_accesslog) AND was_responseCode:[400 TO 499]"
+          "query": "(_type:access_log OR _type:liberty_accesslog) AND ibm_responseCode:[400 TO 499]"
         },
         "18": {
           "id": 18,
@@ -172,7 +172,7 @@
           "pin": true,
           "type": "lucene",
           "enable": true,
-          "query": "(_type:access_log OR _type:liberty_accesslog) AND was_responseCode:[500 TO 599]"
+          "query": "(_type:access_log OR _type:liberty_accesslog) AND ibm_responseCode:[500 TO 599]"
         },
         "19": {
           "id": 19,
@@ -181,7 +181,7 @@
           "pin": true,
           "type": "lucene",
           "enable": true,
-          "query": "(_type:access_log OR _type:liberty_accesslog) AND was_elapsedTime:[0 TO 250000]"
+          "query": "(_type:access_log OR _type:liberty_accesslog) AND ibm_elapsedTime:[0 TO 250000]"
         },
         "20": {
           "id": 20,
@@ -190,7 +190,7 @@
           "pin": true,
           "type": "lucene",
           "enable": true,
-          "query": "(_type:access_log OR _type:liberty_accesslog) AND was_elapsedTime:[250000 TO 500000]"
+          "query": "(_type:access_log OR _type:liberty_accesslog) AND ibm_elapsedTime:[250000 TO 500000]"
         },
         "21": {
           "id": 21,
@@ -199,7 +199,7 @@
           "pin": true,
           "type": "lucene",
           "enable": true,
-          "query": "(_type:access_log OR _type:liberty_accesslog) AND was_elapsedTime:{500000 TO 1000000]"
+          "query": "(_type:access_log OR _type:liberty_accesslog) AND ibm_elapsedTime:{500000 TO 1000000]"
         },
         "22": {
           "id": 22,
@@ -208,7 +208,7 @@
           "pin": true,
           "type": "lucene",
           "enable": true,
-          "query": "(_type:access_log OR _type:liberty_accesslog) AND was_elapsedTime:>1000000"
+          "query": "(_type:access_log OR _type:liberty_accesslog) AND ibm_elapsedTime:>1000000"
         },
         "23": {
           "id": 23,
@@ -235,7 +235,7 @@
           "pin": true,
           "type": "lucene",
           "enable": true,
-          "query": "_type:liberty_gc AND was_duration:[1000000 TO 5000000]"
+          "query": "_type:liberty_gc AND ibm_duration:[1000000 TO 5000000]"
         },
         "26": {
           "id": 26,
@@ -244,7 +244,7 @@
           "pin": true,
           "type": "lucene",
           "enable": true,
-          "query": "_type:liberty_gc AND was_duration:>5000000"
+          "query": "_type:liberty_gc AND ibm_duration:>5000000"
         }
       },
       "ids": [
@@ -281,7 +281,7 @@
       "list": {
         "0": {
           "type": "time",
-          "field": "was_datetime",
+          "field": "ibm_datetime",
           "from": "now-1h",
           "to": "now",
           "mandate": "must",
@@ -342,7 +342,7 @@
           "editable": true,
           "type": "terms",
           "loadingEditor": false,
-          "field": "was_userDir",
+          "field": "ibm_userDir",
           "exclude": [],
           "missing": false,
           "other": true,
@@ -375,7 +375,7 @@
           "editable": true,
           "type": "terms",
           "loadingEditor": false,
-          "field": "was_serverName",
+          "field": "ibm_serverName",
           "exclude": [],
           "missing": false,
           "other": true,
@@ -418,7 +418,7 @@
           "type": "histogram",
           "loadingEditor": false,
           "mode": "count",
-          "time_field": "was_datetime",
+          "time_field": "ibm_datetime",
           "value_field": null,
           "x-axis": true,
           "y-axis": true,
@@ -494,7 +494,7 @@
           "type": "histogram",
           "loadingEditor": false,
           "mode": "count",
-          "time_field": "was_datetime",
+          "time_field": "ibm_datetime",
           "value_field": null,
           "x-axis": true,
           "y-axis": true,
@@ -570,7 +570,7 @@
           "type": "histogram",
           "loadingEditor": false,
           "mode": "count",
-          "time_field": "was_datetime",
+          "time_field": "ibm_datetime",
           "value_field": null,
           "x-axis": true,
           "y-axis": true,
@@ -728,7 +728,7 @@
           "type": "histogram",
           "loadingEditor": false,
           "mode": "count",
-          "time_field": "was_datetime",
+          "time_field": "ibm_datetime",
           "value_field": null,
           "x-axis": true,
           "y-axis": true,
@@ -807,7 +807,7 @@
           "type": "histogram",
           "loadingEditor": false,
           "mode": "count",
-          "time_field": "was_datetime",
+          "time_field": "ibm_datetime",
           "value_field": null,
           "x-axis": true,
           "y-axis": true,
@@ -884,7 +884,7 @@
           "type": "histogram",
           "loadingEditor": false,
           "mode": "count",
-          "time_field": "was_datetime",
+          "time_field": "ibm_datetime",
           "value_field": null,
           "x-axis": true,
           "y-axis": true,
@@ -967,7 +967,7 @@
           "type": "histogram",
           "loadingEditor": false,
           "mode": "count",
-          "time_field": "was_datetime",
+          "time_field": "ibm_datetime",
           "value_field": null,
           "x-axis": true,
           "y-axis": true,
@@ -1042,7 +1042,7 @@
           "type": "histogram",
           "loadingEditor": false,
           "mode": "count",
-          "time_field": "was_datetime",
+          "time_field": "ibm_datetime",
           "value_field": null,
           "x-axis": true,
           "y-axis": true,
@@ -1125,8 +1125,8 @@
           "type": "histogram",
           "loadingEditor": false,
           "mode": "mean",
-          "time_field": "was_datetime",
-          "value_field": "was_elapsedTime",
+          "time_field": "ibm_datetime",
+          "value_field": "ibm_elapsedTime",
           "x-axis": true,
           "y-axis": true,
           "scale": ".001",
@@ -1198,7 +1198,7 @@
           "type": "histogram",
           "loadingEditor": false,
           "mode": "count",
-          "time_field": "was_datetime",
+          "time_field": "ibm_datetime",
           "value_field": null,
           "x-axis": true,
           "y-axis": true,
@@ -1284,8 +1284,8 @@
           "type": "histogram",
           "loadingEditor": false,
           "mode": "mean",
-          "time_field": "was_datetime",
-          "value_field": "was_duration",
+          "time_field": "ibm_datetime",
+          "value_field": "ibm_duration",
           "x-axis": true,
           "y-axis": true,
           "scale": 1,
@@ -1357,8 +1357,8 @@
           "type": "histogram",
           "loadingEditor": false,
           "mode": "mean",
-          "time_field": "was_datetime",
-          "value_field": "was_usedHeap",
+          "time_field": "ibm_datetime",
+          "value_field": "ibm_usedHeap",
           "x-axis": true,
           "y-axis": true,
           "scale": 1,
@@ -1430,8 +1430,8 @@
           "type": "histogram",
           "loadingEditor": false,
           "mode": "mean",
-          "time_field": "was_datetime",
-          "value_field": "was_heap",
+          "time_field": "ibm_datetime",
+          "value_field": "ibm_heap",
           "x-axis": true,
           "y-axis": true,
           "scale": 1,
@@ -1517,14 +1517,14 @@
           "pages": 5,
           "offset": 0,
           "sort": [
-            "was_sequence",
+            "ibm_sequence",
             "desc"
           ],
           "overflow": "min-height",
           "fields": [
-            "was_datetime",
+            "ibm_datetime",
             "loglevel",
-            "was_threadId",
+            "ibm_threadId",
             "message"
           ],
           "highlight": [],
@@ -1569,19 +1569,19 @@
           "pages": 5,
           "offset": 0,
           "sort": [
-            "was_sequence",
+            "ibm_sequence",
             "desc"
           ],
           "overflow": "min-height",
           "fields": [
-            "was_datetime",
-            "was_remoteHost",
-            "was_requestMethod",
-            "was_requestProtocol",
-            "was_uriPath",
-            "was_userAgent",
-            "was_responseCode",
-            "was_elapsedTime"
+            "ibm_datetime",
+            "ibm_remoteHost",
+            "ibm_requestMethod",
+            "ibm_requestProtocol",
+            "ibm_uriPath",
+            "ibm_userAgent",
+            "ibm_responseCode",
+            "ibm_elapsedTime"
           ],
           "highlight": [],
           "sortable": true,
@@ -1625,16 +1625,16 @@
           "pages": 5,
           "offset": 0,
           "sort": [
-            "was_sequence",
+            "ibm_sequence",
             "desc"
           ],
           "overflow": "min-height",
           "fields": [
-            "was_reason",
-            "was_gcType",
-            "was_usedHeap",
-            "was_heap",
-            "was_duration"
+            "ibm_reason",
+            "ibm_gcType",
+            "ibm_usedHeap",
+            "ibm_heap",
+            "ibm_duration"
           ],
           "highlight": [],
           "sortable": true,
@@ -1678,16 +1678,16 @@
           "pages": 5,
           "offset": 0,
           "sort": [
-            "was_sequence",
+            "ibm_sequence",
             "desc"
           ],
           "overflow": "min-height",
           "fields": [
-            "was_datetime",
+            "ibm_datetime",
             "loglevel",
-            "was_threadId",
-            "was_className",
-            "was_methodName",
+            "ibm_threadId",
+            "ibm_className",
+            "ibm_methodName",
             "message"
           ],
           "highlight": [],
@@ -1732,15 +1732,15 @@
           "pages": 5,
           "offset": 0,
           "sort": [
-            "was_sequence",
+            "ibm_sequence",
             "desc"
           ],
           "overflow": "min-height",
           "fields": [
-            "was_className",
-            "was_probeID",
-            "was_exceptionName",
-            "was_objectDetails"
+            "ibm_className",
+            "ibm_probeID",
+            "ibm_exceptionName",
+            "ibm_objectDetails"
           ],
           "highlight": [],
           "sortable": true,
@@ -1787,16 +1787,16 @@
       "query": "*",
       "pinned": true,
       "history": [
-        "_type:liberty_gc AND was_duration:>5000000",
-        "_type:liberty_gc AND was_duration:[1000000 TO 5000000]",
+        "_type:liberty_gc AND ibm_duration:>5000000",
+        "_type:liberty_gc AND ibm_duration:[1000000 TO 5000000]",
         "_type:liberty_*",
         "_type:liberty_gc",
-        "_type:access_log AND was_elapsedTime:>1000000",
-        "_type:access_log AND was_elapsedTime:{500000 TO 1000000]",
-        "_type:access_log AND was_elapsedTime:[250000 TO 500000]",
-        "_type:access_log AND was_elapsedTime:[0 TO 250000]",
-        "_type:access_log AND was_responseCode:[500 TO 599]",
-        "_type:access_log AND was_responseCode:[400 TO 499]"
+        "_type:access_log AND ibm_elapsedTime:>1000000",
+        "_type:access_log AND ibm_elapsedTime:{500000 TO 1000000]",
+        "_type:access_log AND ibm_elapsedTime:[250000 TO 500000]",
+        "_type:access_log AND ibm_elapsedTime:[0 TO 250000]",
+        "_type:access_log AND ibm_responseCode:[500 TO 599]",
+        "_type:access_log AND ibm_responseCode:[400 TO 499]"
       ],
       "remember": 10
     },
@@ -1837,7 +1837,7 @@
         "2h",
         "1d"
       ],
-      "timefield": "was_datetime",
+      "timefield": "ibm_datetime",
       "now": true,
       "filter_id": 0
     }

@@ -25,10 +25,10 @@
     "_type": "search",
     "_source": {
       "columns": [
-        "was_className",
-        "was_ probeID",
-        "was_exceptionName",
-        "was_sequence"
+        "ibm_className",
+        "ibm_ probeID",
+        "ibm_exceptionName",
+        "ibm_sequence"
       ],
       "description": "",
       "group": "SPACE_ID_PLACE_HOLDER",
@@ -37,7 +37,7 @@
         "searchSourceJSON": "{\"index\":\"[logstash-SPACE_ID_PLACE_HOLDER-]YYYY.MM.DD\",\"query\":{\"query_string\":{\"analyze_wildcard\":true,\"query\":\"type:liberty_ffdc\"}},\"filter\":[],\"highlight\":{\"pre_tags\":[\"@kibana-highlighted-field@\"],\"post_tags\":[\"@/kibana-highlighted-field@\"],\"fields\":{\"*\":{}},\"fragment_size\":2147483647}}"
       },
       "sort": [
-        "was_sequence.raw",
+        "ibm_sequence.raw",
         "desc"
       ],
       "title": "liberty_ffdcSearch",
@@ -52,7 +52,7 @@
         "loglevel",
         "module",
         "message",
-        "was_sequence"
+        "ibm_sequence"
       ],
       "description": "",
       "group": "SPACE_ID_PLACE_HOLDER",
@@ -61,7 +61,7 @@
         "searchSourceJSON": "{\"index\":\"[logstash-SPACE_ID_PLACE_HOLDER-]YYYY.MM.DD\",\"query\":{\"query_string\":{\"query\":\"_type:liberty_message\",\"analyze_wildcard\":true}},\"filter\":[],\"highlight\":{\"pre_tags\":[\"@kibana-highlighted-field@\"],\"post_tags\":[\"@/kibana-highlighted-field@\"],\"fields\":{\"*\":{}},\"fragment_size\":2147483647}}"
       },
       "sort": [
-        "was_sequence",
+        "ibm_sequence",
         "desc"
       ],
       "title": "liberty_messageSearch",
@@ -79,7 +79,7 @@
       "group": "SPACE_ID_PLACE_HOLDER",
       "hits": 0,
       "kibanaSavedObjectMeta": {
-        "searchSourceJSON": "{\"index\":\"[logstash-SPACE_ID_PLACE_HOLDER-]YYYY.MM.DD\",\"highlight\":{\"pre_tags\":[\"@kibana-highlighted-field@\"],\"post_tags\":[\"@/kibana-highlighted-field@\"],\"fields\":{\"*\":{}},\"fragment_size\":2147483647},\"filter\":[],\"query\":{\"query_string\":{\"query\":\"type:\\\"liberty_accesslog\\\" AND !was_responseCode:\\\"200\\\"\",\"analyze_wildcard\":true}}}"
+        "searchSourceJSON": "{\"index\":\"[logstash-SPACE_ID_PLACE_HOLDER-]YYYY.MM.DD\",\"highlight\":{\"pre_tags\":[\"@kibana-highlighted-field@\"],\"post_tags\":[\"@/kibana-highlighted-field@\"],\"fields\":{\"*\":{}},\"fragment_size\":2147483647},\"filter\":[],\"query\":{\"query_string\":{\"query\":\"type:\\\"liberty_accesslog\\\" AND !ibm_responseCode:\\\"200\\\"\",\"analyze_wildcard\":true}}}"
       },
       "sort": [
         "@timestamp",
@@ -97,7 +97,7 @@
         "loglevel",
         "module",
         "message",
-        "was_sequence"
+        "ibm_sequence"
       ],
       "description": "",
       "group": "SPACE_ID_PLACE_HOLDER",
@@ -106,7 +106,7 @@
         "searchSourceJSON": "{\"index\":\"[logstash-SPACE_ID_PLACE_HOLDER-]YYYY.MM.DD\",\"query\":{\"query_string\":{\"query\":\"type:liberty_trace\",\"analyze_wildcard\":true}},\"filter\":[],\"highlight\":{\"pre_tags\":[\"@kibana-highlighted-field@\"],\"post_tags\":[\"@/kibana-highlighted-field@\"],\"fields\":{\"*\":{}},\"fragment_size\":2147483647}}"
       },
       "sort": [
-        "was_sequence",
+        "ibm_sequence",
         "desc"
       ],
       "title": "liberty_traceSearch",
@@ -118,12 +118,12 @@
     "_type": "search",
     "_source": {
       "columns": [
-        "was_remoteHost",
-        "was_uriPath",
-        "was_responseCode",
-        "was_bytesReceived",
-        "was_elapsedTime",
-        "was_sequence"
+        "ibm_remoteHost",
+        "ibm_uriPath",
+        "ibm_responseCode",
+        "ibm_bytesReceived",
+        "ibm_elapsedTime",
+        "ibm_sequence"
       ],
       "description": "",
       "group": "SPACE_ID_PLACE_HOLDER",
@@ -132,7 +132,7 @@
         "searchSourceJSON": "{\"index\":\"[logstash-SPACE_ID_PLACE_HOLDER-]YYYY.MM.DD\",\"query\":{\"query_string\":{\"query\":\"type:liberty_accesslog\",\"analyze_wildcard\":true}},\"filter\":[],\"highlight\":{\"pre_tags\":[\"@kibana-highlighted-field@\"],\"post_tags\":[\"@/kibana-highlighted-field@\"],\"fields\":{\"*\":{}},\"fragment_size\":2147483647}}"
       },
       "sort": [
-        "was_sequence.raw",
+        "ibm_sequence.raw",
         "desc"
       ],
       "title": "liberty_accessLogSearch",
@@ -144,11 +144,11 @@
     "_type": "search",
     "_source": {
       "columns": [
-        "was_gcType",
-        "was_usedHeap",
-        "was_heap",
-        "was_duration",
-        "was_sequence"
+        "ibm_gcType",
+        "ibm_usedHeap",
+        "ibm_heap",
+        "ibm_duration",
+        "ibm_sequence"
       ],
       "description": "",
       "group": "SPACE_ID_PLACE_HOLDER",
@@ -157,7 +157,7 @@
         "searchSourceJSON": "{\"index\":\"[logstash-SPACE_ID_PLACE_HOLDER-]YYYY.MM.DD\",\"query\":{\"query_string\":{\"query\":\"type:liberty_gc\",\"analyze_wildcard\":true}},\"filter\":[],\"highlight\":{\"pre_tags\":[\"@kibana-highlighted-field@\"],\"post_tags\":[\"@/kibana-highlighted-field@\"],\"fields\":{\"*\":{}},\"fragment_size\":2147483647}}"
       },
       "sort": [
-        "was_sequence",
+        "ibm_sequence",
         "desc"
       ],
       "title": "liberty_gcSearch",
