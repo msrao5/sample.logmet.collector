@@ -147,6 +147,7 @@
         "ibm_gcType",
         "ibm_usedHeap",
         "ibm_heap",
+        "ibm_maxHeap",
         "ibm_duration",
         "ibm_sequence"
       ],
