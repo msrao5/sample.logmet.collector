@@ -26,7 +26,7 @@
     "_source": {
       "columns": [
         "ibm_className",
-        "ibm_ probeID",
+        "ibm_probeID",
         "ibm_exceptionName",
         "ibm_sequence"
       ],
