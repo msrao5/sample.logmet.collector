@@ -1,6 +1,6 @@
 [
   {
-    "_id": "SPACE_ID_PLACE_HOLDER_ODM-Dashboard-Overview",
+    "_id": "SPACE_ID_PLACE_HOLDER_ODMoC-Dashboard-Overview",
     "_type": "visualization",
     "_source": {
       "description": "",
@@ -8,9 +8,9 @@
       "kibanaSavedObjectMeta": {
         "searchSourceJSON": "{\"query\":{\"query_string\":{\"query\":\"*\",\"analyze_wildcard\":true}},\"filter\":[]}"
       },
-      "title": "ODM Dashboard Overview",
+      "title": "ODMoC Dashboard Overview",
       "version": 1,
-      "visState": "{\"type\":\"markdown\",\"params\":{\"markdown\":\"Use this dashboard to monitor your ODM logs. \\n\\nThe dashboard is divided in three sections:\\n1. Source Tables: understand where your logs are coming from. Filter in a particular environment by clicking on a line in a table.\\n2. Graphs: monitor trends across your environments and identify unwanted behaviors.\\n3. Logs: view the actual log data.\\n\\nNote: any queries in your search bar or any filters that you add by clicking on the tables/graphs will apply to the entire dashboard\"},\"aggs\":[],\"listeners\":{}}"
+      "visState": "{\"type\":\"markdown\",\"params\":{\"markdown\":\"Use this dashboard to monitor your ODMoC logs. \\n\\nThe dashboard is divided in three sections:\\n1. Source Tables: understand where your logs are coming from. Filter in a particular environment by clicking on a line in a table.\\n2. Graphs: monitor trends across your environments and identify unwanted behaviors.\\n3. Logs: view the actual log data.\\n\\nNote: any queries in your search bar or any filters that you add by clicking on the tables/graphs will apply to the entire dashboard\"},\"aggs\":[],\"listeners\":{}}"
     }
   },
   {
@@ -227,8 +227,8 @@
       "visState": "{\"type\":\"markdown\",\"params\":{\"markdown\":\"View ODM logs in the **ODM Logs** table. Click on the twistie to the left to expand all of the metadata for a particular log message (tip: add a positive or negative filter on a particular metadata element by clicking on the plus or minus magnifying glasses for that element).\"},\"aggs\":[],\"listeners\":{}}"
     }
   },
-   {
-    "_id": "SPACE_ID_PLACE_HOLDER_ODM-Servers",
+  {
+    "_id": "SPACE_ID_PLACE_HOLDER_ODMoC-Environments",
     "_type": "visualization",
     "_source": {
       "description": "",
@@ -237,13 +237,13 @@
         "searchSourceJSON": "{\"filter\":[]}"
       },
       "savedSearchId": "SPACE_ID_PLACE_HOLDER_ODM-Logs",
-      "title": "ODM Servers",
+      "title": "ODMoC Environments",
       "version": 1,
-      "visState": "{\"type\":\"table\",\"params\":{\"perPage\":10,\"showPartialRows\":false,\"showMeticsAtAllLevels\":false},\"aggs\":[{\"id\":\"1\",\"type\":\"count\",\"schema\":\"metric\",\"params\":{}},{\"id\":\"2\",\"type\":\"terms\",\"schema\":\"bucket\",\"params\":{\"field\":\"ibm_serverName.raw\",\"size\":50,\"order\":\"desc\",\"orderBy\":\"1\"}}],\"listeners\":{}}"
+      "visState": "{\"type\":\"table\",\"params\":{\"perPage\":10,\"showPartialRows\":false,\"showMeticsAtAllLevels\":false},\"aggs\":[{\"id\":\"1\",\"type\":\"count\",\"schema\":\"metric\",\"params\":{}},{\"id\":\"2\",\"type\":\"terms\",\"schema\":\"bucket\",\"params\":{\"field\":\"env.raw\",\"size\":50,\"order\":\"desc\",\"orderBy\":\"1\"}}],\"listeners\":{}}"
     }
   },
   {
-    "_id": "SPACE_ID_PLACE_HOLDER_ODM-User-Directories",
+    "_id": "SPACE_ID_PLACE_HOLDER_ODMoC-Instances",
     "_type": "visualization",
     "_source": {
       "description": "",
@@ -252,9 +252,24 @@
         "searchSourceJSON": "{\"filter\":[]}"
       },
       "savedSearchId": "SPACE_ID_PLACE_HOLDER_ODM-Logs",
-      "title": "ODM User Directories",
+      "title": "ODMoC Instances",
       "version": 1,
-      "visState": "{\"type\":\"table\",\"params\":{\"perPage\":10,\"showPartialRows\":false,\"showMeticsAtAllLevels\":false},\"aggs\":[{\"id\":\"1\",\"type\":\"count\",\"schema\":\"metric\",\"params\":{}},{\"id\":\"2\",\"type\":\"terms\",\"schema\":\"bucket\",\"params\":{\"field\":\"ibm_userDir.raw\",\"size\":50,\"order\":\"desc\",\"orderBy\":\"1\"}}],\"listeners\":{}}"
+      "visState": "{\"type\":\"table\",\"params\":{\"perPage\":10,\"showPartialRows\":false,\"showMeticsAtAllLevels\":false},\"aggs\":[{\"id\":\"1\",\"type\":\"count\",\"schema\":\"metric\",\"params\":{}},{\"id\":\"2\",\"type\":\"terms\",\"schema\":\"bucket\",\"params\":{\"field\":\"instance.raw\",\"size\":50,\"order\":\"desc\",\"orderBy\":\"1\"}}],\"listeners\":{}}"
+    }
+  },
+  {
+    "_id": "SPACE_ID_PLACE_HOLDER_ODMoC-Templates",
+    "_type": "visualization",
+    "_source": {
+      "description": "",
+      "group": "SPACE_ID_PLACE_HOLDER",
+      "kibanaSavedObjectMeta": {
+        "searchSourceJSON": "{\"filter\":[]}"
+      },
+      "savedSearchId": "SPACE_ID_PLACE_HOLDER_ODM-Logs",
+      "title": "ODMoC Templates",
+      "version": 1,
+      "visState": "{\"type\":\"table\",\"params\":{\"perPage\":10,\"showPartialRows\":false,\"showMeticsAtAllLevels\":false},\"aggs\":[{\"id\":\"1\",\"type\":\"count\",\"schema\":\"metric\",\"params\":{}},{\"id\":\"2\",\"type\":\"terms\",\"schema\":\"bucket\",\"params\":{\"field\":\"template.raw\",\"size\":50,\"order\":\"desc\",\"orderBy\":\"1\"}}],\"listeners\":{}}"
     }
   }
 ]
