@@ -1,19 +1,5 @@
 [
   {
-    "_id": "SPACE_ID_PLACE_HOLDER_ODM-Dashboard-Overview",
-    "_type": "visualization",
-    "_source": {
-      "description": "",
-      "group": "SPACE_ID_PLACE_HOLDER",
-      "kibanaSavedObjectMeta": {
-        "searchSourceJSON": "{\"query\":{\"query_string\":{\"query\":\"*\",\"analyze_wildcard\":true}},\"filter\":[]}"
-      },
-      "title": "ODM Dashboard Overview",
-      "version": 1,
-      "visState": "{\"type\":\"markdown\",\"params\":{\"markdown\":\"Use this dashboard to monitor your ODM logs. \\n\\nThe dashboard is divided in three sections:\\n1. Source Tables: understand where your logs are coming from. Filter in a particular environment by clicking on a line in a table.\\n2. Graphs: monitor trends across your environments and identify unwanted behaviors.\\n3. Logs: view the actual log data.\\n\\nNote: any queries in your search bar or any filters that you add by clicking on the tables/graphs will apply to the entire dashboard\"},\"aggs\":[],\"listeners\":{}}"
-    }
-  },
-  {
     "_id": "SPACE_ID_PLACE_HOLDER_ODM-Query-Examples",
     "_type": "visualization",
     "_source": {
@@ -24,7 +10,7 @@
       },
       "title": "ODM Query Examples",
       "version": 1,
-      "visState": "{\"type\":\"markdown\",\"params\":{\"markdown\":\"Here are some useful queries that you can copy/paste into the search bar above:\\n\\n- to filter in logs from Decision Server modules (keep/remove the module which you want/need): `module: /.*(common|mbean|persistence|execution|console|htds|dvs|cdi|engine).*/`\\n\\n- to filter in logs from Decision Server about ruleset lifecycle events: `message: RESMGMT AND NOT (ibm_odm_ruleset.raw: \\\"\\\" OR ibm_odm_resmgmt_message: notification* OR ibm_odm_resmgmt_message: property*)`\\n\\n- to filter in logs from Decision Center modules (only for modules with the complete path in the logs): `module: /.*(teamserver|decisioncenter).*/\\n`\\n\\n- to filter in logs for a particular ruleset path, eg */myruleapp/1.0/myruleset/1.0*: ` ibm_odm_ruleset: \\\"/myruleapp/1.0/myruleset/1.0\\\"`\\n \\n- to filter in logs for a particular ruleapp name, eg *myruleapp*: `ibm_odm_ruleapp_name: \\\"myruleapp\\\"`\\n - the fields `ibm_odm_ruleapp_version`, `ibm_odm_ruleset_name`, `ibm_odm_ruleset_version` are also available\"},\"aggs\":[],\"listeners\":{}}"
+      "visState": "{\"type\":\"markdown\",\"params\":{\"markdown\":\"Here are some useful queries that you can copy/paste into the search bar above:\\n\\n- to filter in exceptions only: `loglevel: \\\"ERROR\\\" OR loglevel:\\\"SystemErr\\\"`\\n\\n- to filter in exceptions and warnings only: `loglevel: \\\"ERROR\\\" OR loglevel:\\\"SystemErr\\\" OR loglevel:\\\"WARNING\\\"`\\n\\n- to filter in logs from Decision Server modules (keep/remove the module which you want/need): `module: /.*(common|mbean|persistence|execution|console|htds|dvs|cdi|engine).*/`\\n\\n- to filter in logs from Decision Server about ruleset lifecycle events: `message: RESMGMT AND NOT (ibm_odm_ruleset.raw: \\\"\\\" OR ibm_odm_resmgmt_message: notification* OR ibm_odm_resmgmt_message: property*)`\\n\\n- to filter in logs from Decision Center modules (only for modules with the complete path in the logs): `module: /.*(teamserver|decisioncenter).*/\\n`\\n\\n- to filter in logs for a particular ruleset path, eg */myruleapp/1.0/myruleset/1.0*: ` ibm_odm_ruleset: \\\"/myruleapp/1.0/myruleset/1.0\\\"`\\n \\n- to filter in logs for a particular ruleapp name, eg *myruleapp*: `ibm_odm_ruleapp_name: \\\"myruleapp\\\"`\\n - the fields `ibm_odm_ruleapp_version`, `ibm_odm_ruleset_name`, `ibm_odm_ruleset_version` are also available\"},\"aggs\":[],\"listeners\":{}}"
     }
   },
   {
@@ -227,7 +213,21 @@
       "visState": "{\"type\":\"markdown\",\"params\":{\"markdown\":\"View ODM logs in the **ODM Logs** table. Click on the twistie to the left to expand all of the metadata for a particular log message (tip: add a positive or negative filter on a particular metadata element by clicking on the plus or minus magnifying glasses for that element).\"},\"aggs\":[],\"listeners\":{}}"
     }
   },
-   {
+  {
+    "_id": "SPACE_ID_PLACE_HOLDER_ODM-Dashboard-Overview",
+    "_type": "visualization",
+    "_source": {
+      "description": "",
+      "group": "SPACE_ID_PLACE_HOLDER",
+      "kibanaSavedObjectMeta": {
+        "searchSourceJSON": "{\"query\":{\"query_string\":{\"query\":\"*\",\"analyze_wildcard\":true}},\"filter\":[]}"
+      },
+      "title": "ODM Dashboard Overview",
+      "version": 1,
+      "visState": "{\"type\":\"markdown\",\"params\":{\"markdown\":\"Use this dashboard to monitor your ODM logs. \\n\\nThe dashboard is divided in three sections:\\n1. Tables: understand where the logs you are seeing are coming from. Filter in a particular tag, host, server, or user directory by clicking on a line in a table.\\n2. Graphs: monitor trends across your environments and identify unwanted behaviors.\\n3. Logs: view the actual log data.\\n\\nNote: any queries in your search bar or any filters that you add by clicking on the tables/graphs will apply to the entire dashboard.\"},\"aggs\":[],\"listeners\":{}}"
+    }
+  },
+ {
     "_id": "SPACE_ID_PLACE_HOLDER_ODM-Servers",
     "_type": "visualization",
     "_source": {
