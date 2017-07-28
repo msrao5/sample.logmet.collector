@@ -4,9 +4,9 @@
     "_type": "search",
     "_source": {
       "columns": [
-        "module",
-        "loglevel",
-        "ibm_odm_ruleset",
+        "module_str",
+        "loglevel_str",
+        "ibm_odm_ruleset_str",
         "message"
       ],
       "description": "",
